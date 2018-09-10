@@ -1,0 +1,61 @@
+
+.cart {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.cart th {
+	font-weight: 600;
+}
+
+.cart td,
+.cart th {
+	border: 1px solid #efefef;
+	vertical-align: top;
+	padding: 3px;
+}
+
+.cart .total,
+.cart .money {
+	text-align: right;
+}
+
+.discount {
+	max-width: 300px;
+}
+
+.desc {
+	font-size: small;
+}
+
+b {
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+i {
+	font-style: italic;
+	font-size: small;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.remove_cart {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	text-decoration: underline;
+}
+
+input[type=number] {
+	width: 35px;
+}
+
+.header-goose 	{
+	display: flex;
+}
+
+.header-goose img 	{
+	width: 15%;
+	height: 15%;
+}
