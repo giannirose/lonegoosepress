@@ -1,0 +1,37 @@
+<div class="block">
+	<perch:if exists="street_address">
+		<p class="info_block">
+			<perch:content id="street_address" type="text" label="Enter street address" /> 
+		</p>
+	</perch:if>
+	<perch:if exists="po_box">
+		<p class="info_block"> 
+			<perch:content id="po_box" type="text" label="Enter Post Office Box number, if there is one." /> 
+		</p>
+	</perch:if>
+
+		<p class="info_block">
+			<perch:content id="city" type="text" label="Enter the city" />, <span class="info_block">
+			<perch:content id="state" type="text" label="Enter the state as you wish it to appear in your contact areas" /> 
+		</span>  <span class="info_block">
+			<perch:content id="zip_code" type="text" label="Enter the zip code" /> 
+		</span>
+		</p>
+
+		<p class="info_block">
+			<perch:content id="mobile" type="text" label="Enter your mobile number" /> 
+		</p>
+
+	<perch:if exists="other_phone">
+		<p class="info_block">
+			<perch:content id="other_phone" type="text" label="Enter another phone number, if there is one." /> 
+		</p>
+	</perch:if>
+
+		<p class="info_block">			
+			<span class="info_detail"><a href="mailto:<perch:content id="principal_email" type="text" label="Enter your principal email address" divider-before="Email Addresses" />" >
+			<perch:content id="principal_email" type="text" />
+			</a></span> 
+		</p>
+
+</div>
