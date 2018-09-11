@@ -1,0 +1,1358 @@
+/* Reset */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+
+/* Global */
+body {
+	color           : rgb(30, 30, 30);
+	background-color: #fff;
+	/*background-color: rgb(239, 239, 239);*/
+	font-family     : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight     : 300;
+	line-height     : 1.6; 
+}
+
+.wrapper {
+	margin: 0 0 20px 20px;
+}
+
+.icon {
+	background: url('/assets/img/sprite.png') no-repeat 0 0;	
+}
+
+small {
+	font-size: 80%;
+}
+
+
+/* Text */
+
+a:link,
+a:visited {
+	color          : rgb(204, 97, 135);
+	text-decoration: none;
+	border-bottom  : 1px solid rgb(204, 97, 135);
+	font-weight: 400;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color        : rgb(30, 30, 30);
+	border-bottom: 2px solid rgb(240, 88, 78);
+}
+
+h1 {
+	font-size  : 200%;
+	text-align : center;
+   color: #CCC;
+   font-family: Superclarendon, serif;
+   font-weight: 700;
+   font-style: normal;
+   padding: .5em 0 .5em 0;
+   line-height: 1.15em;
+}
+
+h2 	{
+	font-size  : 150%;
+	text-align : center;
+	color      : rgb(0, 0, 0);
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   font-style: normal;
+   padding: .25em 0 1em 0;
+   line-height: 1.15em;
+}
+
+
+/*h2,*/
+legend {
+	font-weight: 300;
+	margin     : 1em 0 0.5em 0;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	color      : rgb(0, 0, 0);
+	line-height: 1;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+.minor h2,
+legend {
+	text-transform: uppercase;
+	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size     : 87.5%;
+	margin        : 0.5em 0;
+}
+
+.minor p {
+	font-size: 87.5%;
+}
+
+.minor.blog h2,
+.minor.blog h2 a:link,
+.minor.blog h2 a:visited {
+	color: rgb(240, 88, 78);
+	border: 0;
+}
+
+.minor.events h2,
+.minor.events h2 a:link,
+.minor.events h2 a:visited {
+	color : rgb(87, 149, 178);
+	border: 0;
+}
+
+.minor.gallery h2,
+.minor.gallery h2 a:link,
+.minor.gallery h2 a:visited {
+	color : rgb(98, 119, 227);
+	border: 0;
+}
+
+.minor.contact h2,
+.minor.contact h2 a:link,
+.minor.contact h2 a:visited {
+	color : rgb(240, 158, 78);
+	border: 0;
+}
+
+.minor.shop h2,
+.minor.shop h2 a:link,
+.minor.shop h2 a:visited,
+.shop legend {
+	color : rgb(204, 97, 135);
+	border: 0;
+}
+
+.minor.members h2,
+.minor.members h2 a:link,
+.minor.members h2 a:visited {
+	color : rgb(174, 190, 98);
+	border: 0;
+}
+
+.minor.about h2,
+.minor.about h2 a:link,
+.minor.about h2 a:visited {
+	color : rgb(98, 190, 141);
+	border: 0;
+}
+
+/* I fail at specificity */
+.minor h2 a:hover,
+.minor h2 a:focus,
+.minor h2 a:active,
+.minor.blog h2 a:hover,
+.minor.blog h2 a:focus,
+.minor.blog h2 a:active,
+.minor.events h2 a:hover,
+.minor.events h2 a:focus,
+.minor.events h2 a:active,
+.minor.gallery h2 a:hover,
+.minor.gallery h2 a:focus,
+.minor.gallery h2 a:active,
+.minor.contact h2 a:hover,
+.minor.contact h2 a:focus,
+.minor.contact h2 a:active,
+.minor.shop h2 a:hover,
+.minor.shop h2 a:focus,
+.minor.shop h2 a:active,
+.minor.members h2 a:hover,
+.minor.members h2 a:focus,
+.minor.members h2 a:active,
+.minor.about h2 a:hover,
+.minor.about h2 a:focus,
+.minor.about h2 a:active  {
+	color: rgb(0, 0, 0);
+}
+
+/* Nav */
+
+.navbar {
+	color                 : rgb(239, 239, 239);
+	background-color      : rgb(39, 39, 39);
+	margin                : 0;
+	padding 			  : 0 20px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.topbar {
+	margin: 0 0 20px 0;
+}
+
+.navbar li {
+	display: inline-block;
+}
+
+.topbar .home {
+	float: left;
+	background-position: 0px -681px;
+	width: 39px;
+	height: 40px;
+	margin: 0 0 0 10px;
+}
+
+
+.topbar .home .nest-logo {
+	fill: #fff;
+	width: 39px;
+	height: 40px;
+	margin-top: -8px;
+	margin-left: -6px;
+}
+
+
+.topbar .lang-home {
+	position: absolute;
+	left: -9999em;
+}
+
+.navbar a:link,
+.navbar a:visited {
+	text-transform  : uppercase;
+	color           : rgb(239, 239, 239);
+	background-color: transparent;
+	text-decoration : none;
+	font-family     : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size       : 75%;
+	border-top      : 4px solid transparent;
+	padding         : 1em 0.5em;
+	display         : block;
+	border-bottom   : 0;
+}
+
+.topbar a:link,
+.topbar a:visited {
+	border-top   : none;
+	border-bottom: 4px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+	border-top   : 4px solid rgb(239, 239, 239);
+	border-bottom: 0;
+}
+
+.topbar a:hover,
+.topbar a:focus,
+.topbar a:active {
+	border-bottom: 4px solid rgb(239, 239, 239);
+	border-top   : 0;
+}
+
+.navbar a.blog:hover {
+	border-top-color: rgb(240, 88, 78);
+}
+
+.navbar a.events:hover {
+	border-top-color: rgb(87, 149, 178);
+}
+
+.navbar a.gallery:hover {
+	border-top-color: rgb(98, 119, 227);
+}
+
+.navbar a.contact:hover {
+	border-top-color: rgb(240, 158, 78);
+}
+
+.navbar a.shop:hover {
+	border-top-color: rgb(204, 97, 135);
+}
+
+.navbar a.members:hover {
+	border-top-color: rgb(174, 190, 98);
+}
+
+.navbar a.about:hover {
+	border-top-color: rgb(98, 190, 141);
+}
+
+.topbar a.blog:hover,
+.topbar a.blog.selected {
+	border-bottom-color: rgb(240, 88, 78);
+	border-top         : 0;
+}
+
+.topbar a.events:hover,
+.topbar a.events.selected {
+	border-bottom-color: rgb(87, 149, 178);
+	border-top         : 0;
+}
+
+.topbar a.gallery:hover,
+.topbar a.gallery.selected {
+	border-bottom-color: rgb(98, 119, 227);
+	border-top         : 0;
+}
+
+.topbar a.contact:hover,
+.topbar a.contact.selected {
+	border-bottom-color: rgb(240, 158, 78);
+	border-top         : 0;
+}
+
+.topbar a.shop:hover,
+.topbar a.shop.selected {
+	border-bottom-color: rgb(204, 97, 135);
+	border-top         : 0;
+}
+
+.topbar a.members:hover,
+.topbar a.members.selected,
+.topbar a.logout:hover,
+.topbar a.logout.selected {
+	border-bottom-color: rgb(174, 190, 98);
+	border-top         : 0;
+}
+
+.topbar a.about:hover,
+.topbar a.about.selected {
+	border-bottom-color: rgb(98, 190, 141);
+	border-top         : 0;
+}
+
+.navbar .fin {
+	float: right;
+}
+
+/* Graphical section heads */
+
+.logo-header {
+	font-family: "cubano";	
+	width: 100%;
+	height: 80px;
+	margin-bottom: 5px;
+	font-size: 170%;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.logo-header .nest-logo {
+	height: 75px;
+	width: 75px;
+	display: inline;
+	vertical-align: middle;
+	margin-top: -15px;
+}
+
+.logo-header span {
+	margin-left: -8px;
+	display: inline;
+	vertical-align: middle;
+}
+
+.logo-header.events {
+	color: rgb(87, 149, 178);
+	fill: rgb(87, 149, 178);
+}
+
+.logo-header.gallery {
+	color: rgb(98, 119, 227);
+	fill: rgb(98, 119, 227);
+}
+
+.logo-header.blog {
+	color: rgb(240, 88, 78);
+	fill: rgb(240, 88, 78);
+}
+
+.logo-header.contact {
+	color: rgb(240, 158, 78);
+	fill: rgb(240, 158, 78);
+}
+
+.logo-header.shop {
+	color: rgb(204, 97, 135);
+	fill: rgb(204, 97, 135);
+}
+
+
+/* Boxes */
+
+.box {
+	margin          : 0 20px 20px 0;
+	padding         : 20px;
+	border-top      : 4px solid rgb(128, 128, 128);
+	background-color: rgb(250, 250, 250);
+	box-shadow      : 0px 2px 5px rgb(213, 213, 213);
+	position 		: relative;
+}
+
+.box.boxed {
+	margin    : 0;
+	box-shadow: none;
+}
+
+.boxer {
+	margin    : 0 20px 20px 0;
+	box-shadow: 0px 2px 5px rgb(213, 213, 213);
+}
+
+.boxer > a {
+	position: relative;
+	display : block;
+	border  : 0;
+}
+
+.boxed:after {
+	content   : ".";
+	display   : block;
+	height    : 0;
+	clear     : both;
+	visibility: hidden;
+}
+
+.blog .box,
+.box.blog {
+	border-top-color: rgb(240, 88, 78);
+}
+
+.gallery .box,
+.box.gallery {
+	border-top-color: rgb(98, 119, 227);
+}
+
+.contact .box,
+.box.contact {
+	border-top-color: rgb(240, 158, 78);
+}
+
+.shop .box,
+.box.shop {
+	border-top-color: rgb(204, 97, 135);
+}
+
+.members .box,
+.box.members,
+.sidebar .box.members {
+	border-top-color: rgb(174, 190, 98);
+}
+
+.about .box,
+.box.about {
+	border-top-color: rgb(98, 190, 141);
+}
+
+.events .box,
+.box.events,
+.sidebar .box.events {
+	border-top-color: rgb(87, 149, 178);
+}
+
+.boxer img {
+	display  : block;
+	width    : 100%;
+}
+
+
+/* Blog */
+
+.posts li {
+	list-style: none;
+}
+
+.posts ol li {
+	list-style: decimal;
+}
+
+.posts .post {
+	padding-left : 80px;
+	padding-right: 20px;
+}
+
+
+.post-title,
+.post-title:link,
+.post-title:visited {
+	font-size    : 150%;
+	font-weight  : 300;
+	color        : rgb(30, 30, 30);
+	font-family  : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border-bottom: 0;
+}
+
+.prime .post-title {
+	font-size    : 275%;
+	margin-bottom: 0.5em;
+	display      : inline-block;
+	border-bottom: 1px solid transparent;
+}
+
+.post-title:hover,
+.post-title:focus,
+.post-title:active {
+	border-bottom: 1px solid rgb(30, 30, 30);
+}
+
+
+
+.posts time {
+	float                 : left;
+	width                 : 80px;
+	text-align            : center;
+	margin-left           : -80px;
+	font-size             : 62.5%;
+	color                 : rgb(158, 158, 158);
+	text-transform        : uppercase;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	-webkit-font-smoothing: antialiased;
+} 
+
+.posts time .day {
+	display         : block;
+	background-color: rgb(239, 239, 239);
+	padding         : 0.5em 0.3em;
+	margin          : 0 auto;
+	width           : 2em;
+	border-radius   : 2em;
+	font-size       : 120%;
+}
+
+
+
+.posts .comments {
+	font-family        : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size          : 75%;
+	color              : rgb(240, 88, 78);
+	width              : 35px;
+	margin-left        : -80px;
+	text-align         : left;
+	float              : left;
+	margin-top         : -1em;
+	padding-left       : 45px;
+	background-position: 25px -32px;
+}
+
+.posts .lang-comments {
+	position: absolute;
+	left    : -99999em;
+
+}
+
+.posts .post:after {
+	width        : 110px;
+	height       : 1px;
+	border-bottom: 2px solid rgb(239, 239, 239);
+	content      : ' ';
+	display      : block;
+	margin       : 1em 0 2em -80px;
+}
+
+.posts {
+	border-bottom : 2px solid rgb(239, 239, 239);
+	margin        : 0 -20px 1em -20px;
+	padding-bottom: 1em;
+}
+
+.posts.singular {
+	border-bottom: none;
+	margin       : 0 0 0 -20px;
+}
+
+.posts .post:last-child:after {
+	display: none;
+}
+
+.posts .post img {
+	float      : right;
+	border     : 2px solid rgb(54, 54, 54);
+	margin-left: 10px;
+	width      : 100%;
+}
+
+.posts .prime img {
+	float      : none;
+	margin-left: 0;
+}
+
+h2.comments {
+	color: rgb(54, 54, 54);
+	margin: 40px 0 20px 0;
+	background-position: 0 -69px;
+	width: 15px;
+	height: 16px;
+	padding-left: 25px;
+}
+
+.comments {
+	list-style: none;
+	margin    : 0 20px 0 0;
+}
+
+.post .comments {
+	margin-right: 0;
+}
+
+.comment {
+	border          : 1px solid rgb(213, 213, 213);
+	background-color: rgb(229, 229, 229);
+	color           : rgb(94, 94, 94);
+	padding         : 0 20px;
+	position        : relative;
+	margin-bottom   : 20px;
+}
+
+.comment:after, 
+.comment:before {
+	top           : 100%;
+	border        : solid transparent;
+	content       : " ";
+	height        : 0;
+	width         : 0;
+	position      : absolute;
+	pointer-events: none;
+}
+
+.comment:after {
+	border-color    : rgba(229, 229, 229, 0);
+	border-top-color: rgb(229, 229, 229);
+	border-width    : 10px;
+	left            : 21px;
+	margin-left     : -10px;
+}
+
+.comment:before {
+	border-color    : rgba(213, 213, 213, 0);
+	border-top-color: rgb(213, 213, 213);
+	border-width    : 11px;
+	left            : 21px;
+	margin-left     : -11px;
+}
+
+.comment.odd {
+	background-color: rgb(250, 250, 250);
+}
+
+.comment.odd:after {
+	border-color    : rgba(250, 250, 250, 0);
+	border-top-color: rgb(250, 250, 250);
+}
+
+.commenter {
+	color        : rgb(240, 88, 78);
+	margin-bottom: 20px;
+}
+
+.commenter .photo {
+	display       : inline;
+	vertical-align: middle;
+	margin-right : 10px;
+	border        : 2px solid rgb(54, 54, 54);
+}
+
+
+/* About */
+
+.about h1 {
+	margin-bottom: 0.4em;
+}
+
+/* Forms */
+
+form {
+
+}
+
+input,
+select {
+	font-size         : 100%;
+	width             : 320px;
+	max-width         : 100%;
+	-moz-box-sizing   : border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing        : border-box;
+}
+
+label {
+	font-size: 87.5%;
+	display  : block;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+textarea, 
+select {
+	background-color: rgb(239, 239, 239);
+	border          : 0;
+	box-shadow      : inset 0px 2px 6px rgb(217, 217, 217);
+	padding         : 0.5em;
+	font-size       : 87.5%;
+	color           : rgb(54, 54, 54);
+	margin-bottom   : 1em;
+}
+
+textarea {
+	width             : 100%;
+	-moz-box-sizing   : border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing        : border-box;
+}
+
+
+
+/* Generic UI */
+
+.read-more,
+.read-more:link,
+.read-more:visited {
+	font-family  : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size    : 75%;
+	border-bottom: 0;
+	margin-top   : -1em;
+	display      : block;
+	clear 		 : right;
+}
+
+.blog .read-more {
+	color: rgb(240, 88, 78);
+}
+
+.events .read-more {
+	color: rgb(87, 149, 178);
+}
+
+.gallery .read-more {
+	color: rgb(98, 119, 227);
+}
+
+.contact .read-more {
+	color: rgb(240, 158, 78);
+}
+
+.shop .read-more {
+	color: rgb(204, 97, 135);
+}
+
+.members .read-more {
+	color: rgb(174, 190, 98);
+}
+
+.about .read-more {
+	color: rgb(98, 190, 141);
+}
+
+.list-cta {
+	text-align    : right;
+}
+
+.list-cta a:link,
+.list-cta a:visited {
+	text-transform: uppercase;
+	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border-bottom : 0;
+	font-size 	  : 87.5%;
+}
+
+.blog .list-cta a:link,
+.blog .list-cta a:visited {
+	color: rgb(240, 88, 78);
+}
+
+.events .list-cta a:link,
+.events .list-cta a:visited {
+	color: rgb(87, 149, 178);
+}
+
+.gallery .list-cta a:link,
+.gallery .list-cta a:visited {
+	color: rgb(98, 119, 227);
+}
+
+.contact .list-cta a:link,
+.contact .list-cta a:visited {
+	color: rgb(240, 158, 78);
+}
+
+.shop .list-cta a:link,
+.shop .list-cta a:visited {
+	color: rgb(204, 97, 135);
+}
+
+.members .list-cta a:link,
+.members .list-cta a:visited {
+	color: rgb(174, 190, 98);
+}
+
+.about .list-cta a:link,
+.about .list-cta a:visited {
+	color: rgb(98, 190, 141);
+}
+
+
+.list-cta:after {
+	content   : ".";
+	display   : block;
+	height    : 0;
+	clear     : both;
+	visibility: hidden;
+}
+
+.button,
+.button:link,
+.button:visited,
+input.button {
+	text-transform        : uppercase;
+	color                 : rgb(255, 255, 255);
+	padding               : 1em 2em;
+	border-radius         : 2em;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border                : 0;
+	display               : inline-block;
+	-webkit-font-smoothing: antialiased;
+	font-size 	  		  : 87.5%;
+	cursor 				  : pointer;
+}
+
+
+.blog .button {
+	background-color: rgb(240, 88, 78);
+}
+
+.gallery .button {
+	background-color: rgb(98, 119, 227);
+}
+
+.contact .button {
+	background-color: rgb(240, 158, 78);
+}
+
+.shop .button {
+	background-color: rgb(204, 97, 135);
+}
+
+.members .button,
+.sidebar .members .button {
+	background-color: rgb(174, 190, 98);
+}
+
+.about .button {
+	background-color: rgb(98, 190, 141);
+}
+
+.events .button,
+.sidebar .events .button {
+	background-color: rgb(87, 149, 178);
+}
+
+.button.knockback {
+	background-color: rgb(160, 160, 160);
+}
+
+
+.button:hover,
+.button:focus,
+.button:active {
+	background-color: rgb(0, 0, 0);
+}
+
+
+/* Social links */
+
+.social .twitter,
+.social .facebook {
+	display            : block;
+	padding            : 5px 0 15px 40px;
+	text-transform     : uppercase;
+	font-size          : 87.5%;
+	font-family        : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border-bottom      : none;
+	color              : rgb(44, 170, 225);
+	background-position: 0 -828px;
+}
+
+.social .facebook {
+	color: rgb(59, 89, 152);
+	background-position: 0 -288px;
+}
+
+.social li {
+	list-style: none;
+}
+
+
+/* Shop */
+
+.product .buy {
+	border-radius   : 2em;
+	background-color: rgb(239, 239, 239);
+	padding-left    : 0.4em;
+	display         : inline-block;
+	float           : right;
+}
+
+.product .price {
+	color                 : rgb(204, 97, 135);
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size             : 87.5%;
+	-webkit-font-smoothing: antialiased;
+	padding               : 0 1em;
+}
+
+.product .buy .button {
+	padding: 0.4em 1.5em;
+}
+
+.product .variants {
+	max-width: 50%;
+	margin: 0;
+}
+
+/* Gallery */
+
+.gallery time {
+	font-size     : 62.5%;
+	color         : rgb(158, 158, 158);
+	text-transform: uppercase;
+	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	margin        : -0.5em 0 1em 0;
+	display       : block;
+}
+
+.gallery time .day {
+	text-transform: none;
+}
+
+.album {
+	position: relative;
+}
+
+.album .image-count,
+.album .gallery-cta {
+	position              : absolute;
+	bottom                : 10px;
+	right                 : 20px;
+	font-size             : 75.0%;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	color                 : rgb(255, 255, 255);
+	background-color      : rgba(0, 0, 0, 0.4);
+	border                : 2px solid rgba(255, 255, 255, 0.4);
+	padding               : 0.5em 2em;
+	border-radius         : 2em;
+	-webkit-font-smoothing: antialiased;
+	text-transform 		  : uppercase;
+}
+
+.album .image-count .lang-photos {
+	position: absolute;
+	left    : -99999em;
+}
+
+.album-images {
+	list-style: none;
+}
+
+.album-images:after {
+	content   : ".";
+	display   : block;
+	height    : 0;
+	clear     : both;
+	visibility: hidden;
+}
+
+.album-images li {
+	max-width: 150px;
+	float    : left;
+}
+
+.album-images .boxer img {
+	width    : auto;
+	max-width: 100%;
+}
+
+/* Events */
+
+.event {
+	padding-left: 100px;
+}
+
+.event time {
+	float                 : left;
+	margin-left           : -100px;
+	width                 : 100px;
+	text-align            : center;
+	font-size             : 87.5%;
+	text-transform        : uppercase;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	color                 : rgb(158, 158 ,158);
+	-webkit-font-smoothing: antialiased;
+	margin-top            : 1em;
+	background-position   : 22px -108px;
+}
+
+.event time .day {
+	font-size: 142.9%;
+	display  : block;
+	color    : rgb(147, 147 ,147);
+	padding  : 18px 0 7px 0;
+}
+
+.upcoming h2 {
+	text-transform     : uppercase;
+	font-family        : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size          : 87.5%;
+	margin             : 0.5em 0 15px 0;
+	color              : rgb(87, 149, 178);
+	border             : 0;
+	text-align         : center;
+	padding            : 40px 0 10px 0;
+	background-position: 50% -216px;
+}
+
+.upcoming li {
+	list-style: none;
+}
+
+.upcoming .event {
+	padding   : 40px 20px 40px 100px;
+	border-top: 2px solid rgb(239, 239, 239);
+	margin    : 0 -20px;
+}
+
+.upcoming .event:last-child {
+	border-bottom: 2px solid rgb(239, 239, 239);
+	margin-bottom: 20px;
+}
+
+.upcoming time {
+	margin-top : -20px;
+	padding-top: 0;
+}
+
+.upcoming time .day {
+	padding: 18px 0 7px 0;
+}
+
+.upcoming a:link,
+.upcoming a:visited {
+	border: 0;
+	color : rgb(30, 30, 30);
+}
+
+.upcoming a:hover,
+.upcoming a:focus,
+.upcoming a:active {
+	border-bottom: 1px solid rgb(30, 30, 30);
+}
+
+.upcoming .rss {
+	position           : absolute;
+	bottom             : 15px;
+	left               : 22px;
+	background-position: 0 -756px;
+	width              : 32px;
+	height             : 32px;
+}
+
+.upcoming .lang-rss {
+	position: absolute;
+	left    : -99999em;
+}
+
+.events.rss .rss {
+	display            : block;
+	background-position: 0 -756px;
+	min-height         : 32px;
+	text-decoration    : none;
+	border             : 0;
+	padding-left       : 56px;
+	padding-top        : 0.3em;
+	text-transform     : uppercase;
+	font-weight        : bold;
+	font-size          : 87.5%;
+	color              : rgb(87, 149, 178);
+}
+
+
+/* Members */
+
+.file {
+	clear: right;
+}
+
+.file .button {
+	float: right;
+}
+
+/* Home page banner */
+
+.banner {
+	margin    : 0 0 0 -20px;
+	position  : relative;
+	top       : -21px;
+	max-height: 300px;
+}
+
+.banner h1 {
+	position: absolute;
+	top: 20px;
+	font-size: 100%;
+	color: #fff;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	left: 0;
+	right: 0;
+	letter-spacing: 0.05em;
+}
+
+.banner .nest-logo {
+	fill: #fff;
+	display: inline-block;
+	height: 130px;
+}
+
+.banner div {
+}
+
+.banner img {
+	width     : 100%;	
+	max-height: 300px;
+	min-height: 260px;
+}
+
+.banner .logo {
+	background-position: 50% -468px;
+	width              : 100%;
+	height             : 154px;
+	position           : absolute;
+	left               : 0;
+	right              : 0;
+	top                : 20px;
+	margin             : 0 auto;
+}
+
+.banner .strap {
+	/*background-image   : url(/assets/img/strapline.png);
+	background-position: 50% 0;
+	background-repeat  : no-repeat;
+	background-size    : 100%;*/
+	width              : 90%;
+	position           : absolute;
+	left               : 0;
+	right              : 0;
+	top                : 200px;
+	margin             : 0 auto;
+	font-family: "cubano";
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	font-size: 2.5em;
+	text-align: center;
+}
+
+
+.carousel-nav {
+	display: none;
+}
+
+
+.embedded {
+	float : right;
+	margin: 0 0 1em 1em;
+	border: 2px solid #404040;
+}
+
+.offscreen {
+	position: absolute;
+	left    : -99999em;
+	top     : auto;
+	width   : 1px;
+	height  : 1px;
+	overflow: hidden;
+}
+
+
+/* Cart */
+
+.box.shoppingcart {
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.cart input[type=number] {
+	width: 3em;
+	display: block;
+}
+
+
+.cart tr {
+	border-top: 2px solid rgb(239, 239, 239);
+}
+
+.cart tr:first-child {
+	border-top: 0;
+}
+
+.cart th {
+	text-align: left;
+}
+
+.cart .money,
+.cart .total th {
+	text-align: right;
+}
+
+.cart th,
+.cart td {
+	padding: 20px 20px 20px 20px;
+}
+
+.cart h3 i {
+	font-weight: normal;
+	font-size: 87.5%;
+}
+
+.cart .buttons {
+	margin-top: 20px;
+	padding: 0 20px;
+}
+
+.cart .checkout.button {
+	float: right;
+	padding: 11px 2em 12px 2em;
+}
+
+.cart .remove_cart {
+	background: none;
+	border: 0;
+	font-size: 87.5%;
+	cursor: pointer;
+	color : rgb(204, 97, 135);
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.cart .remove_cart:hover {
+	border-bottom: 1px solid rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
+}
+
+.cart .desc p {
+	margin-bottom: 0;
+	font-size: 87.5%;
+}
+
+.cart .note {
+	display: block;
+	font-weight: normal;
+}
+
+.minicart {
+	font-size: 87.5%;
+	width: 100%;
+}
+
+.minicart th,
+.minicart td {
+	padding: 10px;
+}
+
+.cart.static {
+	width: 100%;
+}
+
+.order-confirm label,
+.order-confirm input {
+	width: auto;
+	margin: 5px 0;
+}
+
+.shop dt {
+	font-weight: bold;
+	float: left;
+	clear: left;
+	width: 20%;
+}
+
+.downloads ul {
+	list-style: none;
+}
+
+
+.downloads small {
+	font-size: 50%;
+	color: #aaa;
+}
+
+.downloads li {
+	background: url(/assets/img/cloud_download.svg);
+	background-repeat: no-repeat;
+	background-size: 21px;
+	background-position: left 3px;
+	padding-left: 25px;
+}
+
+.download {
+	font-size: 87.5%;
+}
+
+a.download:link,
+a.download:visited {
+	color: rgb(174, 190, 98);
+	border-color: rgb(174, 190, 98);
+}
+
+/* ====== media ====== */
+.media {
+	/*margin: 0 10px 10px 0;*/
+}
+
+.media, 
+.bd {
+	overflow: hidden;
+}
+
+.media .img {
+	float: left; 
+	margin-right: 20px;
+}
+
+.media .img img {
+	display:block;
+}
+
+.media .imgExt {
+	float: right; 
+	margin-left: 20px;
+}
+
+/* columns */
+
+.cols {
+	clear: left;
+	margin: 0 -20px;
+	padding: 0 20px;
+}
+
+.col-a {
+	width: 50%;
+	float: left;
+}
+
+.col-b {
+	width: 50%;
+	float: right;
+}
