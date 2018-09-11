@@ -1,0 +1,77 @@
+<perch:help>This will be a featured image, wider than the other books listed, and with the title and attributions centered below the image.
+</perch:help>
+
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
+	<perch:if exists="img_featured">
+
+		<perch:before>
+		<div class="folio-list">
+		</perch:before>
+			
+			<div class="folio-img-featured">
+				<img src="<perch:shop id="img_featured" type="image" width="800"  density="1.6" crop="true" />" alt="<perch:shop id="title_featured" /> ">
+
+            	<div class="box shop minor folio-txt folio-item text-center">
+                	
+                    <h6><a href="/shop/products/<perch:shop id="slug" type="slug" /	>/"><perch:shop id="title" type="text" /></a></h6>
+
+                    <perch:shop id="authors" type="textarea" />
+                    <perch:shop id="artists" type="textarea" />
+
+                    			<perch:if exists="has_variants">     
+                        		<perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
+                    			<perch:else />
+                        		<perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" />
+                    			</perch:if>
+                  <!-- 
+                    <perch:if exists="current_price">
+                        <div class="buy">
+                            <span class="price">
+                                <perch:shop id="current_price" type="shop_currency_value" />
+                            </span>
+                                <button class="button">Add to Cart</button>
+                                    <perch:input type="cms" />
+                        </div>
+						-->
+
+
+               </div>
+         </div>
+      </div>
+
+   </perch:if>
+
+
+
+
+
+						<perch:if exists="imgcite">
+                     <p>                    
+                         <perch:content id="imgcite" type="text" label="Artwork Citation or additional info&hellip;" help="Add the copyright symbol by typing &amp;copy;" html="true" order="6" />
+                     </p> 
+                  </perch:if>
+				</div>
+				<div class="folio-txt-featured">
+					<h6><a href="<perch:content id="title_featured" type="text" label="Enter the URL link, if there is one" order="7" />" ><perch:content id="title" type="text" label="Enter the title"  title="true" order="3" /></a></h6>
+						<perch:content id="text_featured" type="textarea" label="Enter text information" markdown="true" editor="simplemde" help="Tip: For a new paragraph- double-return; or a single line- Spacebar Spacebar Return" html="true" order="4"/>
+
+</perch:form>
+
+
+
+
+
+
+				</div>
+		<perch:after>
+			</div>
+		</perch:after>
+
+	</perch:if>
+
+			
+
+
+
+
+
