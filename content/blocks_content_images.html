@@ -1,0 +1,23 @@
+<article>
+<perch:content type="text" id="name_edit_item" label="Name for this item." help="Editor: This does not appear on the page. It gives a name to this item on this editing page, rather than Item1, Item2, etc." title="true" suppress="true"/>
+ 
+<perch:blocks>
+
+   <perch:block type="textarea" label="Text Area">
+      <perch:template path="content/text_block_large.html" />
+   </perch:block>
+      <perch:block type="centerimage" label="Center Image">
+         <perch:template path="content/image_ctr_art.html" />
+      </perch:block>
+         <perch:block type="leftimage" label="Left or Right Image">
+            <perch:template path="content/image_lft_rt_text.html" />
+         </perch:block>
+            <perch:block type="folio" label="Folio- Image Series">
+               <perch:template path="content/flexi_folio_caption_block.html" />
+            </perch:block>
+               <perch:block type="centered_content" label="Centered Content- centered text with wide side margins">
+                  <perch:template path="content/centered_content.html" />
+               </perch:block>
+</perch:blocks>
+</article>
+
