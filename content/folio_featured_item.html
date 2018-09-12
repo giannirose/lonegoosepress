@@ -1,0 +1,39 @@
+<perch:help>This will be a featured image, wider than the other books listed, and with the title and attributions centered below the image.
+</perch:help>
+
+	<perch:if exists="img_featured">
+
+		<perch:before>
+			<div class="folio-list">
+		</perch:before>
+			
+				<div class="folio-img-featured">
+					<img src="<perch:content type="image" id="img_featured" label="Image" width="800" bucket="images" order="1"/>" alt="<perch:content type="text" id="alt_one" label="Image description" required="true" help="A straightforward description to aid accessibility and improve browser ranking. This does not appear on the page" order="2"/>" />
+						<perch:if exists="imgcite">
+                     <p>                    
+                         <perch:content id="imgcite" type="text" label="Artwork Citation or additional info&hellip;" help="Add the copyright symbol by typing &amp;copy;" html="true" order="6" />
+                     </p> 
+                  </perch:if>
+				</div>
+				<div class="folio-txt-featured">
+					<h6><a href="<perch:content id="title_featured" type="text" label="Enter the URL link, if there is one" order="7" />" ><perch:content id="title" type="text" label="Enter the title"  title="true" order="3" /></a></h6>
+						<perch:content id="text_featured" type="textarea" label="Enter text information" markdown="true" editor="simplemde" help="Tip: For a new paragraph- double-return; or a single line- Spacebar Spacebar Return" html="true" order="4"/>
+
+
+
+
+
+
+				</div>
+		<perch:after>
+			</div>
+		</perch:after>
+
+	</perch:if>
+
+			
+
+
+
+
+
