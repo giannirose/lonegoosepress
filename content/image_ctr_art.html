@@ -1,0 +1,15 @@
+<div class="art_clear figctr">
+	<figure class="figure_ctr">
+		<img src="<perch:content type="image" id="image_ctr_art" label="Image" title="true" />" alt="<perch:content type="text" id="alt" label="Description"  help="A short and simple description of the image to be used by screen readers. This will not appear on the page."  required="true" title="true" />" />
+			<figcaption class="figure-caption">
+				<perch:if exists="figure_caption">
+				<p><perch:content id="figure_caption" type="text" label="Caption for the image" help="The caption appears as a line beneath the image." html="true" /></p>
+				</perch:if>
+								 <p class="copyright">
+								<perch:content id="cite" type="text" label="Artwork Citation or additional info&hellip;"  help="For a copyright symbol, type &amp;copy" html="true"/>
+								</p> 
+			</figcaption>
+	</figure>
+</div>
+
+ 
