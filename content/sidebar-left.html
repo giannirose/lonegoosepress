@@ -1,0 +1,13 @@
+
+	<perch:content id="left_sidebar" type="text" label="Enter the title for the following items" suppress="true" title="true" /> 
+	<perch:if exists="text_news">
+		<div class="aside-left-news">
+			<perch:content id="text_news" type="textarea" label="This is a news item that will appear at the top of the left sidebar. On a small screen, being a news item, it will appear above the general content." markdown editor="markitup" imagewidth="640" imageheight="480" >
+		</div>
+	</perch:if>
+
+		<div class="aside-left-general">
+			<perch:content id="text_general" type="textarea" label="This is additional information in the sidebar on a larger screen, or below the main content on a smaller screen." markdown editor="markitup" imagewidth="640" imageheight="480">
+		</div>
+
+
