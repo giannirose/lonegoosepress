@@ -1,0 +1,31 @@
+<perch:help>This is a display of folio items, such as an array of books or an array of broadsides, each with a title and additional text. <br>As currently designed for large screens, there will be two items in a row. <br>Use the &quot;Save and add another&quot; button (top right or at bottom of editing area) to add another row.<br>Remember to &quot;Save Changes&quot; before clicking &quot;View Page.&quot;
+</perch:help>
+
+		<perch:before>
+		<div class="folio-list">
+		</perch:before>
+		
+				<div class="folio-img folio-item">
+					<img src="<perch:content type="image" id="image" label="Image" width="800" bucket="images" order="1"/>" alt="<perch:content type="text" id="alt_one" label="Image description" required="true" help="A straightforward description to aid accessibility and improve browser ranking. This does not appear on the page" order="2"/>" />
+						<perch:if exists="imgcite">
+                     <p class="figure-caption">                    
+                         <perch:content id="imgcite" type="text" label="Artwork Citation or additional info&hellip;" help="Add the copyright symbol by typing &amp;copy;" html="true" order="6" />
+                     </p> 
+                  </perch:if>
+				</div>
+
+				<div class="folio-txt folio-item">
+					<h6><a href="<perch:content id="title" type="text" label="Enter the URL link that this page links to (the page address that details this item alone), if there is one" order="7" />" ><perch:content id="title_one" type="text" title="true" order="3" /></a></h6>
+						<perch:content id="text_left" type="textarea" label="Enter text information" markdown="true" editor="simplemde" help="Tip: For a new paragraph- double-return; or a single line- Spacebar Spacebar Return" html="true" order="4"/>
+				</div>
+
+
+		<perch:after>
+			</div>
+		</perch:after>
+			
+
+
+
+
+
