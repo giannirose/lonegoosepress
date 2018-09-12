@@ -1,0 +1,16 @@
+		
+		<div class="folio centered-content"> 
+			<h2 class="centered-content heading"><perch:content type="text" id="title_center" label="Title for this section" title="true" /></h2>
+				<perch:if exists="author_center">
+					<h3 class="centered-content heading"><perch:content type="text" id="author_center" label="Author- or other entry" /></h3>
+				</perch:if>
+					<perch:if exists="author_center">
+						<h4 class="centered-content heading"><perch:content type="text" id="date_center" label="Date- or other entry" /></h4>
+					</perch:if>
+			<div class="centered-content body">
+				<perch:content type="textarea" id="centered_content" label="Enter content" markdown="true" editor="simplemde" divider-after="Images will be centered on the page. To style an image caption, copy the following and add your text: &lt;p class=&#34;figure-caption&#34;&gt;your text&lt;/p&gt; To add an additional citation line beneath the caption, copy and add your text: &lt;p class=&#34;cite&#34;&gt;your text&lt;/p&gt; To add a copyright symbol, write &amp;copy; " html="true"/>
+			</div>
+
+		</div>
+
+
