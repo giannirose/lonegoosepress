@@ -1,0 +1,48 @@
+<perch:before>
+	<div class="wrapper cols2-nav-right">
+	
+		<div class="primary-content">
+<h1>Variants at variant-list_lg.html</h1>
+
+		<perch:shop id="title" type="text" />
+    <perch:shop id="authors" type="textarea" />
+      <perch:shop id="artists" type="textarea" />
+
+<ul class="listing">
+</perch:before>
+<li>
+	<a href="/shop/products/<perch:shop id="slug" type="slug" />/">		
+		<perch:shop id="productVariantDesc" type="text" />
+	</a>
+
+	   <perch:variants>
+     		<perch:variant id="var_intro" type="textarea">
+     		<perch:variant id="description_var1" type="textarea">
+     		<perch:variant id="productVariantDesc" type="text" >
+   	</perch:variants>
+
+	<perch:if not-exists="has_variants">
+		<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart">
+			<perch:input id="product" type="hidden" value="<perch:shop id="productID" env-autofill="false" />" />
+			<perch:input type="submit" value="Add to cart" />
+		</perch:form>
+	</perch:if>
+</li>
+<perch:after>
+</ul>
+</div>
+</div>
+</perch:after>
+
+<perch:shop id="price" type="shop_currency_value" />
+
+	   <perch:variants>
+     		<perch:variant id="var_intro" type="textarea">
+     		<perch:variant id="description_var1" type="textarea">
+     		<perch:variant id="productVariantDesc" type="text" >
+   	</perch:variants>
+
+ <!--<perch:showall />-->
+
+
+
