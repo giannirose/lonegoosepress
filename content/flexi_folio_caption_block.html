@@ -1,0 +1,34 @@
+<!--Begin flexi-folio-->
+<div>
+	<perch:if exists="folio_head">
+		<h4 class="article"><perch:content type="text" id="folio_head" label="Headline for the folio items to follow" /></h4>
+	</perch:if>
+	<perch:if exists="folio_text">
+		<perch:content type="textarea" id="folio_text" label="Text to briefly explain the folio items to follow" markdown="true" editor="simplemde" size="s" />
+	</perch:if>
+		<div class="folio-wrapper">
+			<ul>
+				<perch:repeater id="flexi_images" label="Image Folio: Images added here will lay out horizontally on as many rows as are needed." >
+					<li>
+						<figure class="figure-ctr">
+							<img src="<perch:content type="image" id="image" label="Image" bucket="images" />"  alt="<perch:content type="text" id="alt" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page." required="true"  />" />
+								<figcaption class="figure-caption">
+									<perch:if exists="caption">
+									<perch:content id="caption" type="textarea" label="Caption will appear below the image." markdown="true" editor="simplemde" html="true" size="xs"/>
+								</perch:if>
+								<perch:if exists="citation">
+									<p>
+                                <perch:content id="citation" type="smarttext" label="Artwork Citation or additional info&hellip;" help="Complete the copyright information if needed; otherwise, enter whatever information you would like." html="true" help="Write &amp;copy; for a copyright symbol." />
+                       		</p> 
+								</figcaption>
+						</figure>
+					</li>
+				</perch:repeater>
+			</ul>
+		</div><!-- End class folio-wrapper div -->
+</div><!--End class folio div-->
+<!--End flexi-folio-->
+
+
+
+ 
