@@ -1,9 +1,8 @@
 <?php
 //Section below isthe perch-supplied set-up for manual processing
-//	if (!perch_member_logged_in()) {
-
-//		PerchSystem::redirect('/register');
-//	}
+	if (!perch_member_logged_in()) {
+		PerchSystem::redirect('/register');
+	}
 
 //The following was the default entry	
 /*
@@ -18,8 +17,6 @@
 
 //Following  are from Perch Documentation for Paypal Express
 if (perch_member_logged_in()) {
-
-	PerchUtil::hold_redirects();
 
   //your 'success' return URL
   $return_url = 'http://staging.lonegoosepress.com/payment';
