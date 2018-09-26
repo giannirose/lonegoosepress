@@ -1,42 +1,62 @@
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
 
-   <div class="product boxer ">
-      
-      <div class="gridimg">
-            <perch:if exists="productImage"><img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />"></perch:if>
+<!--heading area-->
+   <h2 class="text-center"><perch:shop id="title" type="text"/></h2>
+
+   <perch:if exists="subtitle">
+      <h3><perch:shop id="subtitle" type="text" /></h3>
+   </perch:if>
+
+   <div class="text-center">
+      <p><perch:shop id="authors" type="textarea" /></p>
+      <p class="text-center"><perch:shop id="artists" type="textarea" /></p>
+   </div>
+
+<!--An intro if needed, as for an announcement or to explain multiple versions-->
+   <perch:if exists="intro_vers">
+      <div class="page-intro text-center">
+         <perch:shop id="intro_vers" type="textarea" />
       </div>
+   </perch:if>
 
-            <div class="box shop minor boxed">
-                <h2><perch:shop id="title" /></h2>
-                    <perch:shop id="authors" type="textarea" />
-                    <perch:shop id="artists" type="textarea" />
-                    <perch:shop id="description" type="textarea" />
+   <perch:if exists="heading_vers_1">
+      <h4 class="text-center">
+         <perch:shop id="heading_vers_1" type="text" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." />
+      </h4>
+   </perch:if>
 
+<!--Begin grid area-->
+   <div class="product boxer ">
 
-                        <perch:if exists="has_variants">
-  
-                            <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
-                            <perch:shop id="description_var1" type="textarea" />
-                            <perch:shop id="var_intro" type="textarea" />
+         <div class="gridimg">
+            <perch:if exists="productImage"><img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />"></perch:if>
+         </div>
+            <div class="box shop minor boxed">                    
 
-                    <perch:variants>
+                  <perch:shop id="description" type="textarea" />
+                     <perch:if exists="has_variants">
+                        <h2><perch:shop id="version_title" type="text" /></h2>
+                           <perch:shop id="version_intro" type="textarea" />
+                              <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
+                           <perch:shop id="description_var1" type="textarea" />
+                           <perch:shop id="var_intro" type="textarea" />
+                           <perch:shop id="productImage" type="image" />
+                              <p>In perch has_variants </p>
+                           <perch:shop id="authors" type="textarea" />  
+                        <perch:variants>
+                           <perch:variant id="var_intro" type="textarea">
+                           <perch:variant id="description_var1" type="textarea">
+                              <perch:shop id="productImage" type="image" />
+                                 <p>In perch:variants</p>
+                        </perch:variants>
+                     <perch:else />
+                        <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" /><!--original value for id was productID-->
+                     </perch:if>
+
+                     <perch:variants>
                         <perch:variant id="var_intro" type="textarea">
                         <perch:variant id="description_var1" type="textarea">
-                    </perch:variants>
-
-                        <perch:else />
-                            <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" /><!--original value for id was productID-->
-                        </perch:if>
-
-       <perch:variants>
-            <perch:variant id="var_intro" type="textarea">
-            <perch:variant id="description_var1" type="textarea">
-    </perch:variants>
-
-
-
-
-
+                     </perch:variants>
 
                         <perch:if exists="current_price">
                             <div class="buy">
@@ -46,82 +66,77 @@
                                     <button class="btn button">Add to Cart</button>
                                         <perch:input type="cms" />
                              </div>
-
                         </perch:if>
 
-
-                        <perch:shop id="desc_info" type="textarea" />
-
-
-
+                     <perch:shop id="desc_info" type="textarea" />
             </div>
-
-            <div class="txt-describe">
+               <div class="txt-describe">
                 <perch:shop id="describe_long" type="textarea" />
-            </div>
+               </div>
 
-             <!--Begin flexi-folio-->  
-            <div class="folio-project"><!--Begin folio-->
-               <div class="folio-flex">
-                    <ul>
-                        <perch:if exists="img_addl_01">
-                        <li>
-                            <figure>
-                                <img src="<perch:shop id="img_addl_01" type="image"  />">
-                                    <figcaption class="figure-caption">
-                                        <perch:shop id="caption_addl_01" type="textarea" />
-                                    </figcaption>
-                            </figure>
-                        </li>
-                        </perch:if>
-                        <perch:if exists="img_addl_02">
-                        <li>
-                            <figure>
-                            <img src="<perch:shop id="img_addl_02" type="image" />">
-                                    <figcaption class="figure-caption">
-                                        <perch:shop id="caption_addl_02" type="textarea" />
-                                    </figcaption>
-                        </li>
-                        </perch:if>
-                        <perch:if exists="img_addl_03">
-                        <li>
-                            <figure>
-                                <img src="<perch:shop id="img_addl_03" type="image" />">
-                                    <figcaption class="figure-caption">
-                                        <perch:shop id="caption_addl_03" type="textarea" />
-                                    </figcaption>
-                            </figure>      
-                        </li>
-                        </perch:if>
-                        <perch:if exists="img_addl_04">
-                        <li>
-                            <figure>
-                            <img src="<perch:shop id="img_addl_04" type="image" />">
-                                <figcaption class="figure-caption">
-                                    <perch:shop id="caption_addl_04" type="textarea" />
-                                </figcaption>      
-                        </li>
-                        </perch:if>
-                        <perch:if exists="img_addl_05">
-                        <li>
-                            <figure>
-                            <img src="<perch:shop id="img_addl_05" type="image" />">
-                            <figcaption class="figure-caption">
-                                <perch:shop id="caption_addl_05" type="textarea" />
-                            </figcaption>      
-                        </li>
-                        </perch:if>
-                    </ul>
+                  <!--Begin flexi-folio-->  
+                  <div class="folio-project"><!--Begin folio-->
+                     <div class="folio-flex">
+                        <ul>
+                           <perch:if exists="img_addl_01">
+                              <li>
+                                 <figure>
+                                    <img src="<perch:shop id="img_addl_01" type="image"  />">
+                                       <figcaption class="figure-caption">
+                                          <perch:shop id="caption_addl_01" type="textarea" />
+                                       </figcaption>
+                                 </figure>
+                              </li>
+                           </perch:if>
+                           <perch:if exists="img_addl_02">
+                              <li>
+                                 <figure>
+                                    <img src="<perch:shop id="img_addl_02" type="image" />">
+                                       <figcaption class="figure-caption">
+                                          <perch:shop id="caption_addl_02" type="textarea" />
+                                       </figcaption>
+                                 </figure>
+                              </li>
+                           </perch:if>
+                           <perch:if exists="img_addl_03">
+                              <li>
+                                 <figure>
+                                    <img src="<perch:shop id="img_addl_03" type="image" />">
+                                       <figcaption class="figure-caption">
+                                          <perch:shop id="caption_addl_03" type="textarea" />
+                                       </figcaption>
+                                 </figure>      
+                              </li>
+                           </perch:if>
+                           <perch:if exists="img_addl_04">
+                              <li>
+                                 <figure>
+                                    <img src="<perch:shop id="img_addl_04" type="image" />">
+                                       <figcaption class="figure-caption">
+                                          <perch:shop id="caption_addl_04" type="textarea" />
+                                       </figcaption> 
+                                 </figure>     
+                              </li>
+                           </perch:if>
+                           <perch:if exists="img_addl_05">
+                              <li>
+                                 <figure>
+                                    <img src="<perch:shop id="img_addl_05" type="image" />">
+                                       <figcaption class="figure-caption">
+                                          <perch:shop id="caption_addl_05" type="textarea" />
+                                       </figcaption>
+                                 </figure>      
+                              </li>
+                           </perch:if>
+                        </ul>
 
-                  </div><!-- End folio-wrapper -->
-               </div> <!--End class="folio"-->
+                     </div><!-- End folio-wrapper -->
+                  </div> <!--End class="folio"-->
           <!--End flexi-folio-->  
-
-
-    </div>
+   </div>
 
 </perch:form>
 
-            <div class="txt-describe">
-                <perch:shop id="describe_longlg" type="textarea" />
-            </div>
+   <div class="txt-describe">
+      <perch:shop id="describe_longlg" type="textarea" />
+   </div>
