@@ -1,142 +1,114 @@
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
 
 <!--heading area-->
-   <h2 class="text-center"><perch:shop id="title" type="text"/></h2>
-
-   <perch:if exists="subtitle">
-      <h3><perch:shop id="subtitle" type="text" /></h3>
-   </perch:if>
-
-   <div class="text-center">
-      <p><perch:shop id="authors" type="textarea" /></p>
-      <p class="text-center"><perch:shop id="artists" type="textarea" /></p>
-   </div>
+      <div class="text-center">
+         <h2 class="text-center">
+               <perch:shop id="title" type="text">
+         </h2>
+         <h3>
+               <perch:shop id="subtitle" type="text">
+         </h3>         
+               <perch:shop id="authors" type="textarea" />
+               <perch:shop id="artists" type="textarea" />
+      </div>
 
 <!--An intro if needed, as for an announcement or to explain multiple versions-->
-   <perch:if exists="intro_vers">
-      <div class="page-intro text-center">
-         <perch:shop id="intro_vers" type="textarea" />
-      </div>
-   </perch:if>
-
-   <perch:if exists="heading_vers_1">
-      <h4 class="text-center">
-         <perch:shop id="heading_vers_1" type="text" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." />
-      </h4>
-   </perch:if>
-
+         <perch:if exists="intro_vers">
+            <div class="page-intro text-center narrow-margin">
+               <perch:shop id="intro_vers" type="textarea" />
+            </div>
+         </perch:if>
+         <perch:if exists="heading_vers_1">
+            <div class="text-center">
+               <perch:shop id="heading_vers_1" type="textarea" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." />
+            </div>
+         </perch:if>
 <!--Begin grid area-->
-   <div class="product boxer ">
-
-         <div class="gridimg">
-            <perch:if exists="productImage"><img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />"></perch:if>
-         </div>
-            <div class="box shop minor boxed">                    
-
+         <div class="product boxer ">
+            <div class="gridimg">
+               <perch:if exists="productImage">
+                  <img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
+               </perch:if>
+            </div>
+               <div class="box shop minor boxed">                    
                   <perch:shop id="description" type="textarea" />
+<!--Begin variants and buy button-->
                      <perch:if exists="has_variants">
                         <h2><perch:shop id="version_title" type="text" /></h2>
                            <perch:shop id="version_intro" type="textarea" />
                               <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
-                           <perch:shop id="description_var1" type="textarea" />
-                           <perch:shop id="var_intro" type="textarea" />
-                           <perch:shop id="productImage" type="image" />
-                              <p>In perch has_variants </p>
-                           <perch:shop id="authors" type="textarea" />  
-                        <perch:variants>
-                           <perch:variant id="var_intro" type="textarea">
-                           <perch:variant id="description_var1" type="textarea">
-                              <perch:shop id="productImage" type="image" />
-                                 <p>In perch:variants</p>
-                        </perch:variants>
+                           <perch:shop id="description_var1" type="textarea" />  <perch:variants>
+                                 <perch:variant id="var_intro" type="textarea">
+                                 <perch:variant id="description_var1" type="textarea">
+                              </perch:variants>
                      <perch:else />
                         <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" /><!--original value for id was productID-->
                      </perch:if>
-
-                     <perch:variants>
-                        <perch:variant id="var_intro" type="textarea">
-                        <perch:variant id="description_var1" type="textarea">
-                     </perch:variants>
-
-                        <perch:if exists="current_price">
-                            <div class="buy">
+                        <perch:variants>
+                           <perch:variant id="var_intro" type="textarea">
+                           <perch:variant id="description_var1" type="textarea">
+                        </perch:variants>
+                           <perch:if exists="current_price">
+                              <div class="buy">
                                 <span class="price">
                                     <perch:shop id="current_price" type="shop_currency_value" />
                                 </span>
                                     <button class="btn button">Add to Cart</button>
                                         <perch:input type="cms" />
-                             </div>
-                        </perch:if>
-
-                     <perch:shop id="desc_info" type="textarea" />
+                              </div>
+                           </perch:if>
+<!--End variants-->
+               </div><!--Close class shop product minor boxed--> 
+         </div><!--Close class="product boxer"-->
+            <div class="margins">
+               <perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup"/>
             </div>
                <div class="txt-describe">
-                <perch:shop id="describe_long" type="textarea" />
+                  <perch:shop id="desc_info" type="textarea" />
                </div>
-
-                  <!--Begin flexi-folio-->  
-                  <div class="folio-project"><!--Begin folio-->
-                     <div class="folio-flex">
-                        <ul>
-                           <perch:if exists="img_addl_01">
-                              <li>
-                                 <figure>
-                                    <img src="<perch:shop id="img_addl_01" type="image"  />">
-                                       <figcaption class="figure-caption">
-                                          <perch:shop id="caption_addl_01" type="textarea" />
-                                       </figcaption>
-                                 </figure>
-                              </li>
-                           </perch:if>
-                           <perch:if exists="img_addl_02">
-                              <li>
-                                 <figure>
-                                    <img src="<perch:shop id="img_addl_02" type="image" />">
-                                       <figcaption class="figure-caption">
-                                          <perch:shop id="caption_addl_02" type="textarea" />
-                                       </figcaption>
-                                 </figure>
-                              </li>
-                           </perch:if>
-                           <perch:if exists="img_addl_03">
-                              <li>
-                                 <figure>
-                                    <img src="<perch:shop id="img_addl_03" type="image" />">
-                                       <figcaption class="figure-caption">
-                                          <perch:shop id="caption_addl_03" type="textarea" />
-                                       </figcaption>
-                                 </figure>      
-                              </li>
-                           </perch:if>
-                           <perch:if exists="img_addl_04">
-                              <li>
-                                 <figure>
-                                    <img src="<perch:shop id="img_addl_04" type="image" />">
-                                       <figcaption class="figure-caption">
-                                          <perch:shop id="caption_addl_04" type="textarea" />
-                                       </figcaption> 
-                                 </figure>     
-                              </li>
-                           </perch:if>
-                           <perch:if exists="img_addl_05">
-                              <li>
-                                 <figure>
-                                    <img src="<perch:shop id="img_addl_05" type="image" />">
-                                       <figcaption class="figure-caption">
-                                          <perch:shop id="caption_addl_05" type="textarea" />
-                                       </figcaption>
-                                 </figure>      
-                              </li>
-                           </perch:if>
-                        </ul>
-
-                     </div><!-- End folio-wrapper -->
-                  </div> <!--End class="folio"-->
-          <!--End flexi-folio-->  
-   </div>
-
+<!--Begin additional versions of a given item-->
+                  <perch:repeater id="versions" label="Add an additional version of an item here; example, a paperback version of a limited edition printing.">
+                     <div class="text-center vers-heading">
+                        <perch:shop id="heading_vers_2" type="textarea" label="This heading identifies the second item when multiple versions exist. Example: Opening the Mouth of the Dead, where both art and paperback versions exist." markdown editor="markitup" size="xs"/>
+                     </div>
+                        <div class="boxer">
+                           <div class="gridimg-vers">
+                              <img src="<perch:shop id="detailImage_two" type="image" label="This image is for a second version of an item"  width="800" bucket="images" />" />
+                           </div>
+                              <div class="boxed-vers">
+                                 <perch:shop id="description_two" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" />
+                              </div>
+                        </div>
+                  </perch:repeater>
+<!--End additional versions of a given item-->
+<!--Begin flexi-folio-->  
+                  <perch:before>
+                     <div class="folio-project margins">
+                        <div class="folio-flex">
+                           <ul>
+                  </perch:before>
+                     <perch:repeater id="flexi_images" label="Detail Images: Click the Add an Item button on the lower right, and use this button to add successive images." notes-before="Editor- These images will be arrayed below the Main Image and Text. They are intended to provide details." >
+                        <li>
+                           <figure>
+                              <img src="<perch:shop id="image_jr" type="image" bucket="images" label="Description" help="A short description will be available to screen readers, aiding accessibility." />" />
+                                 <!--Begin caption and citation area-->
+                                 <figcaption class="figure-caption">
+                                    <perch:shop id="caption_jr" type="textarea" label="This caption appears underneath the image" markdown="true" editor="markitup" size="xs" help="For a paragraph: Return-Return ; for a single line: Spacebar-Spacebar-Return: for a copyright symbol, paste or type: &amp;copy;"  html="true" />
+                                 </figcaption> <!--End Caption and Citation area-->
+                           </figure>
+                        </li>
+                     </perch:repeater>
+                  <perch:after>
+                           </ul>
+                        </div>
+                     </div>
+                  </perch:after>
+                  <!--End flexi-folio-->
 </perch:form>
+<!--
+   <img src="<perch:shop id="img_featured" type="image" label="Add a featured product" width="80" height="80" density="1.6" crop="true" bucket="images" divider-before="Add a featured image. This appears before the list of the other items." />" />
+-->
 
-   <div class="txt-describe">
-      <perch:shop id="describe_longlg" type="textarea" />
-   </div>
+
+
+
