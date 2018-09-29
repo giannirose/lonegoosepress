@@ -558,48 +558,6 @@ li div.folio-txt  {
   }
 }
 
-@media (min-width: 640px)   {
-.gridimg  {
-  grid-column: 1;
-  grid-row: 1;
-  }
-}
-
-.gridimg  {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.boxed  {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-@media (min-width: 640px)   {
-.boxed  {
-  grid-column: 2;
-  grid-row: 1;
-  }
-}
-
-.boxer  {
-display: grid;
-grid-gap: 1.5em;
-grid-template-columns: 1fr;
-margin-left: 1.5em;
-margin-right: 1.5em;
-}
-
-@media (min-width: 640px)   {
-  .boxer  {
-    display: grid;
-    grid-gap: 1.5em;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 7.5rem;
-    margin-right: 7.5rem;
-  }  
-}
-
 .contact  {
   display: grid;
   grid-gap: 2em;
@@ -662,9 +620,6 @@ margin-right: 1.5em;
 
 }
 
-
-
-
 @media  (min-width: 640px)  {
   .folio-list   {
     display: grid;
@@ -698,6 +653,96 @@ margin-right: 1.5em;
     font-size: 1em;
   }
 }
+
+/* Items in the product page set in the grid area */
+.boxer  {
+display: grid;
+grid-gap: 1.5em;
+grid-template-columns: 1fr;
+margin-left: 1.5em;
+margin-right: 1.5em;
+}
+
+@media (min-width: 640px)   {
+  .boxer  {
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+    margin-top: 1.65rem;
+  }  
+}
+
+/* General intro for items with multiple versions
+
+/* Heading with title, author and artist(s) */
+
+/* Main or topmost image */
+
+  @media (min-width: 640px)   {
+    .gridimg  {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+    .gridimg  {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: center;
+    }
+
+    .gridimg-vers  {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: center;
+    }
+
+  @media (min-width: 640px)   {
+    .gridimg-vers  {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+    .gridimg-vers img   {
+      width: 100%;
+      max-height: 448px;
+    }
+
+
+/*General info in column to side of image */
+
+    .boxed  {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  @media (min-width: 640px)   {
+  .boxed  {
+    grid-column: 2;
+    grid-row: 1;
+    }
+  }
+
+      .boxed-vers  {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  @media (min-width: 640px)   {
+  .boxed-vers  {
+    grid-column: 1;
+    grid-row: 1;
+    }
+  }
+
+
+
+
+
+/* End items for the product page */
 
 
 
