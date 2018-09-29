@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: .75em 0 .75em 0;
+    margin: .5em 0 .25em 0;
 }
 
 h2 	{
@@ -366,7 +366,7 @@ h6 	{
 
 @media (min-width: 640px) 	{
 	.folio-list h6 	{
-		margin: 1.5em 0 .75em 0;
+		margin: .75em 0 .75em 0;
 	}	
 }
 
@@ -404,7 +404,7 @@ font-size: .9375rem;
 line-height: 1.5rem;
 letter-spacing: .2em;
 text-transform: uppercase;
-margin-top: 1.5rem;
+margin-top: .75rem;
 }
 
 .mainimg figure img 	{
@@ -413,6 +413,8 @@ margin-top: 1.5rem;
 @media (min-width: 640px) 	{
 .folio-flex img 	{
 	max-height: 224px;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	}
 }
 
@@ -704,6 +706,8 @@ figure {
 	color: #782d20;
 	border: solid 1px #782d20;
 	font-weight: bold;
+	padding-top: .35em;
+	padding-bottom: .35em;
 }
 
 @media (min-width: 640px) {
@@ -739,10 +743,8 @@ figure {
 	margin-top: 0;
 }
 
-
-
 .accordion 	{
-	padding-bottom: 2em;
+	padding-bottom: .75em;
 }
 
 .main-img-txt p 	{
@@ -752,7 +754,6 @@ figure {
 div.folio-img.folio-item(odd) 	{
 	grid-column: 3;
 }
-
 
 /*from original site*/
 /*.header::before {
@@ -1256,7 +1257,8 @@ ul.folio-flex-shop 	{
 }
 
 div.buy 	{
-	margin-bottom: 2em;
+	margin-top: 1.25em;
+	margin-bottom: 1.5em;
 }
 
 div.buy span 	{
@@ -1287,7 +1289,23 @@ body.shop 	{
 article p a {
 	font-weight: 600;
 }
+/*
+@media screen and (min-width: 640px) {
+.folio-project 	{
+	margin-left: 5rem;
+	margin-right: 5rem;
+	}
+}
+*/
 
+.narrow-margin	{
+	text-align: left;
+	margin: 2em 22.5em;
+}
+
+.margins 	{
+	margin: 1.25rem 7.5rem;
+}
 
 
 
