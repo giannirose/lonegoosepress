@@ -1,13 +1,17 @@
+
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
 <!--<div class="project">-->
-
-
 
         <div class="folio-img folio-item">
         <img src="<perch:shop id="productImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
         </div>
             <div class="box shop minor folio-txt folio-item">
+                <perch:if exists="title">
                 <h6><a href="/shop/products/<perch:shop id="slug" type="slug" />/"><perch:shop id="title" type="text" /></a> </h6>
+                <perch:else>
+                <h6><a href="/shop/products/<perch:shop id="slug" type="slug" />/"><perch:shop id="version_title" type="text" /></a> </h6>
+                </perch:if>
+
 
 
                     <perch:shop id="authors" type="textarea" />
@@ -19,9 +23,9 @@
                     <perch:else />
                         <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" />
                     </perch:if>
---> 
+-->
 
-                    <!--
+<!--                    
                         <div class="buy">
                             <span class="price">
                                 <perch:shop id="current_price" type="shop_currency_value" />
@@ -29,7 +33,7 @@
                                 <button class="button">Add to Cart</button>
                                     <perch:input type="cms" />
                         </div>
-                    -->
+-->                    
 
             </div>
  
