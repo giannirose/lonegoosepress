@@ -5,20 +5,31 @@
 <perch:shop id="authors" type="textarea" label="Enter all text for the authors line" markdown="true" editor="markitup" size="s" order="4"/>
 <perch:shop id="artists" type="textarea" label="Enter all text for the artists line" markdown="true" editor="markitup" size="s" order="5"/>
 
-<perch:shop id="productImage" type="image" label="This image appears on the listing page, the page where all the similar products appear. The image entry below is for the featured item page." width="80" height="80" density="1.6" crop="true" bucket="images" order="6"/>
+<perch:shop id="detailImage" type="image" label="This image is on the single item detail page."  width="800" bucket="images" order="6"/>
 
-<perch:shop id="detailImage" type="image" label="This image is on the detail page, the featured image where single item details are listed."  width="800" bucket="images" order="7"/>
+<perch:shop id="productImage" type="image" label="This image appears on the multiple item listing page, the page where all the similar products appear." width="80" height="80" density="1.6" crop="true" bucket="images" order="7"/>
 
-<perch:shop id="description" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" order="8"/>
+<!--Featured item area-->
+	<perch:shop id="img_featured" type="image" label="Enter to show a featured item; leave blank to have no featured item." width="80" height="80" density="1.6" crop="true" bucket="images" divider-before="A featured image is a large centered image that spans the page above the typical ist of items." order="8"/>
+
+<!--End featured item area-->
+
+<perch:shop id="description" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" order="9"/>
+
+<perch:shop id="desc_info" type="textarea" label="These are secondary item details." editor="markitup" markdown="true"  order="10"/>
+
+<perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup" order="11"/>
+
+<perch:shop id="heading_vers_1" type="textarea" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." size="xs" markdown editor="markitup"/>
+
+<perch:shop id="intro_vers" type="textarea" label="This would appear as an introduction- to a book and to an explanation of the book variants; e.g. paperback, art book, ebook." html="true" markdown="true" editor="markitup" />
 
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
 	<perch:input id="product" type="hidden" env-autofill="false" value="<perch:shop id="productID" type="hidden" env-autofill="false" />" />
 	<perch:input type="submit" value="Add to Cart" />
 </perch:form>
 
-<perch:shop id="desc_info" type="textarea" label="These are secondary item details." editor="markitup" markdown="true"  order="9"/>
 
-<perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup" order="10"/>
 
 
 <perch:shop id="slug" type="slug" editable="true" indelible="true" label="Slug" for="title sku" order="11" divider-before="Meta data" />
@@ -34,6 +45,7 @@
 
 <perch:shop id="catalog_only" type="shop_catalog_only" label="Catalog only" />
 <perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="s" min="0" step="any" />
+
 <perch:shop id="sale_price" type="shop_currency_value" label="Sale price" size="s" min="0" step="any" />
 <perch:shop id="trade_price" type="shop_currency_value" label="Trade price" size="s" min="0" step="any" runway="true" />
 <perch:shop id="on_sale" type="checkbox" value="1" label="Use sale price" />
@@ -43,56 +55,38 @@
 <perch:shop id="stock_status" type="shop_stock_status" label="Stock status" divider-before="Stock" required="true" />
 <perch:shop id="stock_level" type="number" label="Stock level" size="s" />
 <perch:shop id="stock_location" type="shop_stock_location" label="Count stock" />
+<!--
 <perch:shop id="max_in_cart" type="number" label="Max quantity in cart" size="s" />
-
+-->
 <perch:shop id="requires_shipping" type="shop_requires_shipping" label="Requires shipping" divider-before="Shipping" />
 <perch:shop id="weight" type="number" label="Shipping weight" size="s" />
 <perch:shop id="width" type="number" label="Width" size="s" />
 <perch:shop id="height" type="number" label="Height" size="s" />
 <perch:shop id="depth" type="number" label="Depth" size="s" />
 
-<perch:shop id="img_addl_01" type="image" label="add an image" bucket="images" divider-before="list of smaller supplemental images" notes-before="Add an image with (optional) caption" />
+<!--Featured item area-->
+	<perch:shop id="img_featured" type="image" label="Add a featured product image—this spans the top of the listing page." width="80" height="80" density="1.6" crop="true" bucket="images" divider-before="If there is a featured item, add the image, authors and artists in the following boxes" />
 
-<perch:shop id="caption_addl_01" type="textarea" label="add a caption for the image" html="true" markdown editor="markitup" help="Type Spacebar-Spacebar-Return for a single line; type &amp;copy; to display the copyright symbol" size="s" />
-
-<perch:shop id="img_addl_02" type="image" label="add an image" bucket="images" />
-
-<perch:shop id="caption_addl_02" type="textarea" label="add a caption for the image" html="true" markdown editor="markitup" help="Type Spacebar-Spacebar-Return for a single line; type &amp;copy; to display the copyright symbol" size="s" />
-
-<perch:shop id="img_addl_03" type="image" label="add an image" bucket="images" />
-
-<perch:shop id="caption_addl_03" type="textarea" label="add a caption for the image" html="true" markdown editor="markitup" help="Type Spacebar-Spacebar-Return for a single line; type &amp;copy; to display the copyright symbol" size="s" />
-
-<perch:shop id="img_addl_04" type="image" label="add an image" bucket="images" />
-
-<perch:shop id="caption_addl_04" type="textarea" label="add a caption for the image" html="true" markdown editor="markitup" help="Type Spacebar-Spacebar-Return for a single line; type &amp;copy; to display the copyright symbol" size="s" />
-
-<perch:shop id="img_addl_05" type="image" label="add an image" bucket="images" />
+<!--End featured item area-->
+ <perch:repeater id="flexi_images" label="Detail Images: Click the Add an Item button on the lower right, and use this button to add successive images." notes-before="Editor- These images will be arrayed below the Main Image and Text. They are intended to provide details." >
 
 
-<perch:shop id="caption_addl_05" type="textarea" label="add a caption for the image" html="true" markdown editor="markitup" help="Type Spacebar-Spacebar-Return for a single line; type &amp;copy; to display the copyright symbol" size="s" />
+         <perch:shop id="image_jr" type="image" bucket="images" />
 
-<perch:shop id="img_featured" type="image" label="Add a featured product" width="80" height="80" density="1.6" crop="true" bucket="images" divider-before="Add a featured image. This appears before the list of the other items." />
+					<perch:shop id="caption_jr" type="textarea" label="This caption appears underneath the image" markdown="true" editor="simplemde" size="xs" help="For a paragraph: Return-Return ; for a single line: Spacebar-Spacebar-Return: for a copyright symbol, paste or type: &amp;copy;"  html="true" />
 
-<perch:shop id="description_var1" type="textarea" label="Add book details; e.g. pages, date, typography information, etc." html="true" editor="markitup" markdown="true" />
+</perch:repeater>
 
-<perch:shop id="productVariantDesc" type="text" label="productVariantDesc" />
+<perch:repeater id="versions" label="Add an additional version of an item here; example, a paperback version of a limited edition printing.">
 
-<perch:shop id="textblocktest" type="text" />
+<perch:shop id="heading_vers_2" type="textarea" label="This heading identifies the second item when multiple versions exist. Example: Opening the Mouth of the Dead, where both art and paperback versions exist." markdown editor="markitup" size="xs"/>
 
+<perch:shop id="detailImage_two" type="image" label="This image is for a second version of an item"  width="800" bucket="images" />
+
+<perch:shop id="description_two" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" />
+</perch:repeater>
+<!--
 <perch:shop id="img_detail_one" type="image" width="80" height="80" density="1.6" crop="true" bucket="images" />
 
-<perch:shop id="heading_vers_1" type="text" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." />
-
-<perch:shop id="intro_vers" type="textarea" label="This would appear as an introduction- to a book and to an explanation of the book variants; e.g. paperback, art book, ebook." html="true" markdown="true" editor="markitup" />
-
-<!--
-	<perch:shop id="productImage" type="image" label="This image appears on the listing page, the page where all the similar products appear. The image entry below is for the featured item page." order="6" width="800" bucket="images" />
-
-	<perch:shop id="detailImage" type="image" width="80" height="80" density="1.6" crop="true" bucket="images" />
+<perch:shop id="productVariantDesc" type="text" label="productVariantDesc" />
 -->
-
-
-
-
-
