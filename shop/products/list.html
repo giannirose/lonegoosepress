@@ -1,34 +1,29 @@
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
-<p>this is list.html</p>
 
-    <div class="product boxer">
-
-        <div class="gridimg">
-            <perch:if exists="productImage"><img src="<perch:shop id="productImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />"></perch:if>
-        </div>
-
-            <div class="box shop minor boxed">
-                <h2><a href="/shop/products/<perch:shop id="slug" type="slug" />/"><perch:shop id="title" type="text" /> in list.html</a> </h2>
-                    <perch:shop id="authors" type="textarea" />
-                    <perch:shop id="artists" type="textarea" />
-                    <perch:shop id="description" type="textarea" />
-                        <perch:if exists="has_variants">     
-                            <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
-                        <perch:else />
-                            <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" />
-                        </perch:if>
-<!--                            <div class="buy">
-                                <span class="price">
-                                    <perch:shop id="current_price" type="shop_currency_value" />
-                                </span>
-                                    <button class="btn button">Add to Cart</button>
-                                        <perch:input type="cms" />
-                             </div>
+   <div class="product boxer list-page">
+      <div class="gridimg">
+         <img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
+      </div>
+         <div class="box shop minor boxed">
+            <h2><a href="/shop/products/<perch:shop id="slug" type="slug" />/"><perch:shop id="title" type="text" /></a> </h2>
+               <perch:shop id="authors" type="textarea" />
+               <perch:shop id="artists" type="textarea" />
+               <perch:shop id="description" type="textarea" />
+                  <perch:if exists="has_variants">     
+                        <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
+                     <perch:else />
+                        <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" />
+                  </perch:if>
+<!--                 <div class="buy">
+                        <span class="price">
+                           <perch:shop id="current_price" type="shop_currency_value" />
+                        </span>
+                           <button class="btn button">Add to Cart</button>
+                              <perch:input type="cms" />
+                     </div>
 -->
-            </div>
-
-
-    </div>
-
+         </div>
+   </div>
 </perch:form>
+
 
