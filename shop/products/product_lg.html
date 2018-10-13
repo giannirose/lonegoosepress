@@ -1,15 +1,19 @@
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
 
 <!--heading area-->
-      <div class="text-center">
+      <div class="text-center center-content">
          <h2 class="text-center">
                <perch:shop id="title" type="text">
          </h2>
-         <h3>
-               <perch:shop id="subtitle" type="text">
-         </h3>         
+            <perch:if exists="subtitle">
+               <h3>
+                  <perch:shop id="subtitle" type="text">
+               </h3>
+            </perch:if>         
                <perch:shop id="authors" type="textarea" />
-               <perch:shop id="artists" type="textarea" />
+                  <perch:if exists="artists">
+                     <perch:shop id="artists" type="textarea" />
+                  </perch:if>
       </div>
 
 <!--An intro if needed, as for an announcement or to explain multiple versions-->
@@ -37,17 +41,10 @@
                         <h2><perch:shop id="version_title" type="text" /></h2>
                            <perch:shop id="version_intro" type="textarea" />
                               <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
-                           <perch:shop id="description_var1" type="textarea" />  <perch:variants>
-                                 <perch:variant id="var_intro" type="textarea">
-                                 <perch:variant id="description_var1" type="textarea">
-                              </perch:variants>
+                           <perch:shop id="description_var1" type="textarea" />
                      <perch:else />
                         <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" /><!--original value for id was productID-->
                      </perch:if>
-                        <perch:variants>
-                           <perch:variant id="var_intro" type="textarea">
-                           <perch:variant id="description_var1" type="textarea">
-                        </perch:variants>
                            <perch:if exists="current_price">
                               <div class="buy">
                                 <span class="price">
@@ -57,15 +54,16 @@
                                         <perch:input type="cms" />
                               </div>
                            </perch:if>
+               <div class="txt-describe">
+                  <perch:shop id="desc_info" type="textarea" />
+               </div>
 <!--End variants-->
                </div><!--Close class shop product minor boxed--> 
          </div><!--Close class="product boxer"-->
             <div class="margins">
                <perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup"/>
             </div>
-               <div class="txt-describe">
-                  <perch:shop id="desc_info" type="textarea" />
-               </div>
+
 <!--Begin additional versions of a given item-->
                   <perch:repeater id="versions" label="Add an additional version of an item here; example, a paperback version of a limited edition printing.">
                      <div class="text-center vers-heading">
@@ -105,9 +103,6 @@
                   </perch:after>
                   <!--End flexi-folio-->
 </perch:form>
-<!--
-   <img src="<perch:shop id="img_featured" type="image" label="Add a featured product" width="80" height="80" density="1.6" crop="true" bucket="images" divider-before="Add a featured image. This appears before the list of the other items." />" />
--->
 
 
 
