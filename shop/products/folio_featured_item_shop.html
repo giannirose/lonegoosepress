@@ -1,60 +1,14 @@
-<perch:help>This will be a featured image, wider than the other books listed, and with the title and attributions centered below the image.
-</perch:help>
-
-<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
-	<perch:if exists="img_featured">
-		<perch:before>
-		<div>
-		</perch:before>		
+	<perch:if exists="img_featured">		
 			<div class="folio-img-featured">
 				<img src="<perch:shop id="img_featured" type="image" width="800"  density="1.6" crop="true" />" />
-
-            	<div class="box shop minor folio-txt folio-item text-center">
-                	
-                    <h6><a href="/shop/products/<perch:shop id="slug" type="slug" /	>/"><perch:shop id="title" type="text" /></a></h6>
-
+            	<div class="box shop minor folio-txt folio-item text-center">   
+                  <h6><a href="/shop/products/<perch:shop id="slug" type="slug" />/"><perch:shop id="title" type="text" /></a></h6>
                      <h6><perch:shop id="subtitle" type="text" /></h6>
-
-                    <perch:shop id="authors" type="textarea" />
-                    <perch:shop id="artists" type="textarea" />
-<!--
-                    			<perch:if exists="has_variants">     
-                        		<perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
-                    			<perch:else />
-                        		<perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" />
-                    			</perch:if>
--->
-                  <!-- 
-                    <perch:if exists="current_price">
-                        <div class="buy">
-                            <span class="price">
-                                <perch:shop id="current_price" type="shop_currency_value" />
-                            </span>
-                                <button class="button">Add to Cart</button>
-                                    <perch:input type="cms" />
-                        </div>
-						-->
-
-
+                        <perch:shop id="authors" type="textarea" />
+                        <perch:shop id="artists" type="textarea" />
                </div>
          </div>
-      </div>
-
    </perch:if>
-
-</perch:form>
-
-
-
-
-
-
-				</div>
-		<perch:after>
-			</div>
-		</perch:after>
-
-	</perch:if>
 
 			
 
