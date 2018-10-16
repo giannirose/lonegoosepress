@@ -4,21 +4,16 @@
 <perch:shop id="subtitle" type="text" label="This is the sub-title for the item" order="3" />
 <perch:shop id="authors" type="textarea" label="Enter all text for the authors line" markdown="true" editor="markitup" size="s" order="4"/>
 <perch:shop id="artists" type="textarea" label="Enter all text for the artists line" markdown="true" editor="markitup" size="s" order="5"/>
+<perch:shop id="sorting_number" type="text" label="Number the item, which will determine the order by which the item will be displayed on the list page." order="6"/>
+<perch:shop id="detailImage" type="image" label="This image is on the single item detail page."  width="800" bucket="images" order="7"/>
 
-<perch:shop id="detailImage" type="image" label="This image is on the single item detail page."  width="800" bucket="images" order="6"/>
+<perch:shop id="productImage" type="image" label="This image appears on the multiple item listing page, the page where all the similar products appear." width="80" height="80" density="1.6" crop="true" bucket="images" order="8"/>
 
-<perch:shop id="productImage" type="image" label="This image appears on the multiple item listing page, the page where all the similar products appear." width="80" height="80" density="1.6" crop="true" bucket="images" order="7"/>
+<perch:shop id="description" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" order="10"/>
 
-<!--Featured item area-->
-	<perch:shop id="img_featured" type="image" label="Enter to show a featured item; leave blank to have no featured item." width="80" height="80" density="1.6" crop="true" bucket="images" divider-before="A featured image is a large centered image that spans the page above the typical ist of items." order="8"/>
+<perch:shop id="desc_info" type="textarea" label="These are secondary item details." editor="markitup" markdown="true"  order="11"/>
 
-<!--End featured item area-->
-
-<perch:shop id="description" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" order="9"/>
-
-<perch:shop id="desc_info" type="textarea" label="These are secondary item details." editor="markitup" markdown="true"  order="10"/>
-
-<perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup" order="11"/>
+<perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup" order="12"/>
 
 <perch:shop id="heading_vers_1" type="textarea" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." size="xs" markdown editor="markitup"/>
 
@@ -29,28 +24,22 @@
 	<perch:input type="submit" value="Add to Cart" />
 </perch:form>
 
-
-
-
 <perch:shop id="slug" type="slug" editable="true" indelible="true" label="Slug" for="title sku" order="11" divider-before="Meta data" />
-
-<perch:shop id="sorting_number" type="text" label="Number the item, which will determine the order by which the item will be displayed on the list page." order="12"/>
 
 <perch:shop id="status" type="shop_status" label="Status" />
 <perch:shop id="brand" type="shop_brand" label="Brand" allowempty="true" />
 
-<perch:categories id="category" set="products" label="Category">
-	<perch:category id="catTitle" />
+<perch:categories id="category" set="products" label="Category" max="1">
+	<perch:category id="catTitle" type="text" label="Add label for categories" />
 </perch:categories>
 
 <perch:shop id="catalog_only" type="shop_catalog_only" label="Catalog only" />
-<perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="s" min="0" step="any" />
 
+<perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="s" min="0" step="any" />
 <perch:shop id="sale_price" type="shop_currency_value" label="Sale price" size="s" min="0" step="any" />
 <perch:shop id="trade_price" type="shop_currency_value" label="Trade price" size="s" min="0" step="any" runway="true" />
 <perch:shop id="on_sale" type="checkbox" value="1" label="Use sale price" />
 <perch:shop id="tax_group" type="shop_tax_group" label="Tax group" required="true" />
-
 
 <perch:shop id="stock_status" type="shop_stock_status" label="Stock status" divider-before="Stock" required="true" />
 <perch:shop id="stock_level" type="number" label="Stock level" size="s" />
@@ -70,7 +59,6 @@
 <!--End featured item area-->
  <perch:repeater id="flexi_images" label="Detail Images: Click the Add an Item button on the lower right, and use this button to add successive images." notes-before="Editor- These images will be arrayed below the Main Image and Text. They are intended to provide details." >
 
-
          <perch:shop id="image_jr" type="image" bucket="images" />
 
 					<perch:shop id="caption_jr" type="textarea" label="This caption appears underneath the image" markdown="true" editor="simplemde" size="xs" help="For a paragraph: Return-Return ; for a single line: Spacebar-Spacebar-Return: for a copyright symbol, paste or type: &amp;copy;"  html="true" />
@@ -85,8 +73,3 @@
 
 <perch:shop id="description_two" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" />
 </perch:repeater>
-<!--
-<perch:shop id="img_detail_one" type="image" width="80" height="80" density="1.6" crop="true" bucket="images" />
-
-<perch:shop id="productVariantDesc" type="text" label="productVariantDesc" />
--->
