@@ -1,4 +1,27 @@
-<!--Store/Shop page-->
+<!--Category View-->
+<perch:before>
+   <div>
+      <perch:categories id="category" set="products">
+         <div class="margins-narrow">
+            <h1 class="catTitle text-center"><perch:category id="catTitle" type="smarttext" /></h1>
+               <perch:category id="desc" type="textarea" />
+         </div>
+            <perch:if exists="img_feat">
+               <div class="folio-list">
+                  <div class="folio-img-featured text-center">
+                     <perch:category id="intro_feat" type="textarea" label="Add information introducing the featured image" markdown editor="markitup" size="s" divider-before="Show a featured image and related information" />
+                        <img src="<perch:category id="img_feat" type="image" />" />
+                           <h3 class="catTitle"><a href="<perch:category id="itemURL_feat" type="text" />" /><perch:category id="itemTitle_feat" type="smarttext" /></a></h3>
+                              <div class="box shop minor folio-item text-center">
+                                 <perch:category id="author_feat" type="textarea" />
+                                 <perch:category id="artist_feat" type="textarea" />
+                              </div>
+                  </div>
+               </div>
+            </perch:if>
+      </perch:categories>
+</perch:before>
+
 <perch:before>
    <div class="folio-list-shop product boxer">
 </perch:before>
