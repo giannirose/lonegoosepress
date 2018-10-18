@@ -16,6 +16,11 @@
                   </perch:if>
       </div>
 
+      <perch:categories id="products_intro" label="Introductory information for categories of work">
+<perch:category id="catTitle" />
+
+</perch:categories>
+
 <!--An intro if needed, as for an announcement or to explain multiple versions-->
          <perch:if exists="intro_vers">
             <div class="page-intro text-center narrow-margin">
@@ -40,6 +45,7 @@
                      <perch:if exists="has_variants">
                         <h2><perch:shop id="version_title" type="text" /></h2>
                            <perch:shop id="version_intro" type="textarea" />
+
                               <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
                            <perch:shop id="description_var1" type="textarea" />
                      <perch:else />
@@ -103,6 +109,8 @@
                   </perch:after>
                   <!--End flexi-folio-->
 </perch:form>
+
+
 
 
 
