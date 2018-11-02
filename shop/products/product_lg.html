@@ -27,11 +27,6 @@
                <perch:shop id="intro_vers" type="textarea" />
             </div>
          </perch:if>
-         <perch:if exists="heading_vers_1">
-            <div class="text-center">
-               <perch:shop id="heading_vers_1" type="textarea" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." />
-            </div>
-         </perch:if>
 <!--Begin grid area-->
          <div class="product boxer ">
             <div class="gridimg">
@@ -42,6 +37,34 @@
                <div class="box shop minor boxed">                    
                   <perch:shop id="description" type="textarea" />
 <!--Begin variants and buy button-->
+
+
+
+                           <perch:if exists="current_price">
+                              <div class="buy">
+                                <span class="price">
+
+                                    <p class="bold">
+                                       <span class="normal">
+                                          <perch:shop id="price_label" type="text" /> 
+                                       </span>
+                                          <perch:shop id="current_price" type="shop_currency_value" />
+                                    </p>
+
+                                    <p class="bold">
+                                       <span class="normal">
+                                          <perch:shop id="price_label_var2" type="text" />
+                                       </span>
+                                          <perch:shop id="price_var2" type="shop_currency_value" label="Price for this version" size="s" min="0" step="any" />
+                                    </p>
+
+                                </span>
+                              </div>
+                           </perch:if>
+
+
+
+
                      <perch:if exists="has_variants">
                         <h2><perch:shop id="version_title" type="text" /></h2>
                            <perch:shop id="version_intro" type="textarea" />
@@ -53,9 +76,11 @@
                      </perch:if>
                            <perch:if exists="current_price">
                               <div class="buy">
+<!--
                                 <span class="price">
                                     <perch:shop id="current_price" type="shop_currency_value" />
                                 </span>
+-->
                                     <button class="btn button">Add to Cart</button>
                                         <perch:input type="cms" />
                               </div>
@@ -108,6 +133,19 @@
                      </div>
                   </perch:after>
                   <!--End flexi-folio-->
+
+                  <div class="product boxer">
+
+                     <div class="gridimg-vers">
+                           <img src="<perch:shop id="detailImage_var2" type="image" />" >
+                     </div>
+                        <div class="boxed-vers">
+                           <perch:shop id="desc_var2" type="textarea" />
+
+                           <perch:shop id="desc_info_var2" type="textarea" />
+                        </div>
+                  </div>
+
 </perch:form>
 
 
