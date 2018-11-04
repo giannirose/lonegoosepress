@@ -1,0 +1,124 @@
+<p>This is the double-version item of variant_detail, saved here fro future reference.html</p>
+<perch:before>
+	<div class="wrapper cols2-nav-right">
+      <div class="primary-content">
+<!--heading area copied from product_lg.html-->
+
+         <div class="text-center center-content">
+            <h2 class="text-center"><perch:shop id="title" type="text"></h2>
+               <perch:if exists="subtitle">
+                     <h3><perch:shop id="subtitle" type="text"></h3>
+               </perch:if>         
+                  <perch:shop id="authors" type="textarea" />
+                     <perch:if exists="artists"><perch:shop id="artists" type="textarea" />
+                     </perch:if>
+         </div>
+
+<!--End copied heading-->
+            <ul class="listing">
+</perch:before>
+   <li>
+      <a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:shop id="slug" type="slug" />" >		
+		    <perch:shop id="productVariantDesc" type="text" />
+	     </a>
+
+              <a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:shop id="slug" type="slug" />/">     
+          <perch:shop id="productVariantDesc" type="text" />
+        </a>
+<!--
+            <div class="text-center center-content">
+               <h2><perch:shop id="title" type="text" /></h2>
+                  <perch:shop id="authors" type="textarea" />
+                  <perch:shop id="artists" type="textarea" />
+                     <div class="page-intro text-center narrow-margin">
+                        <perch:shop id="var_intro" type="textarea">
+                        <perch:shop id="intro_vers" type="textarea" />
+                     </div>
+            </div>
+
+-->
+<perch:variants>
+   <div class="product boxer">                       
+      <div class="gridimg"> 
+         <img src="<perch:variant id="detailImage_var1" type="image" />" >
+      </div>
+         <div class="boxed">
+            <perch:variant id="desc_var1" type="textarea" />
+               <perch:variant id="price_var1" type="shop_currency_value"  />
+         </div>
+   </div>
+                  <div class="product boxer">                       
+                     <div class="gridimg-vers">
+                           <img src="<perch:variant id="detailImage_var2" type="image" />" >
+                     </div>
+                        <div class="boxed-vers">
+                           <perch:variant id="desc_var2" type="textarea" />
+                           <perch:variant id="price_var2" type="shop_currency_value" label="Price for this version" size="s" min="0" step="any" />
+                        </div>
+                  </div>
+
+               </perch:variants>
+
+	              <perch:if not-exists="has_variants">
+                     <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
+			               <perch:input id="product" type="hidden" value="<perch:shop id="productID" env-autofill="false" />" />
+			                  <perch:input type="submit" value="Add to cart" />
+                     </perch:form>
+                  </perch:if>
+      </li>
+<perch:after>
+      </ul>
+   </div>
+</div>
+</perch:after>
+
+	   <perch:variants>
+         <perch:shop id="price" type="shop_currency_value" />
+     		<perch:variant id="productVariantDesc" type="text" >
+   	</perch:variants>
+
+<perch:variants>
+   <perch:variant id="detailImage_var1" type="image" />
+
+      <perch:variant id="desc_var1" type="textarea" />
+
+         <perch:variant id="price_var1" type="shop_currency_value" label="Price for this version" divider-before="Pricing- Variant" size="s" min="0" step="any" />
+
+            <perch:variant id="detailImage_var2" type="image"  />
+
+               <perch:variant id="desc_var2" type="textarea"  />
+
+                  <perch:variant id="price_var2" type="shop_currency_value" label="Price for this version" size="s" min="0" step="any" />
+j</perch:variants>
+
+<perch:variants>
+    <perch:variant id="productVariantDesc" type="text">
+    <perch:variant id="price" type="shop_currency_value">
+</perch:variants>
+
+<!--Template from Hussein-->
+<perch:variants>
+    <perch:before>
+        <h2>List</h2>
+        <ul>
+    </perch:before>
+
+    <perch:if id="stock_level" match="gt" value="0">
+        <li class="product">
+            <a href="/product/<perch:variant id="slug"/>/<perch:variant id="productID" />" >
+                <perch:variant id="productVariantDesc" />
+            </a>
+        </li>
+    </perch:if>
+    
+    <perch:after>
+        </ul>
+    </perch:after>
+</perch:variants>
+
+<!--End Template from Hussein-->
+
+ <!--<perch:showall />-->
+
+
+
