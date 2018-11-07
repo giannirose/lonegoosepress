@@ -1,0 +1,7 @@
+<perch:if exists="has_variants">
+  <!--* product has variants *-->
+  <perch:template path="shop/products/variant_detail.html" />
+<perch:else />
+  <!--* product doesn't have variants *-->
+  <perch:template path="shop/products/product_lg.html" />
+</perch:if>
