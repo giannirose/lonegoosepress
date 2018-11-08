@@ -1,23 +1,24 @@
 <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
    <perch:before>
-
 <!--heading--> 
-            <perch:variants>
-               <div class="text-center center-content">
-                  <h2 class="text-center"><perch:variant id="title_var" type="text"></h2>
-                     <perch:if exists="subtitle">
-                        <h3><perch:variant id="subtitle_var" type="text"></h3>
-                     </perch:if>         
-                        <perch:variant id="authors_var" type="textarea" />
-                           <perch:if exists="artists_var">
-                              <perch:variant id="artists_var" type="textarea" />
-                           </perch:if>
-
-               </div>
-            </perch:variants>
+      <perch:variants>
+         <div class="text-center center-content">
+            <h2 class="text-center"><perch:variant id="title_var" type="text"></h2>
+               <perch:if exists="subtitle">
+                  <h3><perch:variant id="subtitle_var" type="text"></h3>
+               </perch:if>         
+                  <perch:variant id="authors_var" type="textarea" />
+                     <perch:if exists="artists_var">
+                        <perch:variant id="artists_var" type="textarea" />
+                     </perch:if>
+                        <perch:if exists="intro_var">
+                           <perch:variant id="intro_var" type="textarea" />
+                        </perch:if>
+         </div>
+      </perch:variants>
 <!--End heading-->
 <!--Begin list of items in grid-->
-               <ul class="listing">
+         <ul class="listing">
    </perch:before>
       <li>
          <perch:variants>
@@ -29,28 +30,34 @@
                      <h3><a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:variant id="slug"/>/<perch:variant id="productID" />" ><perch:variant id="title_var1" type="smarttext" /></a></h3>
                         <perch:variant id="desc_var1" type="textarea" />
                            <p class="text-center"><a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:variant id="slug"/>/<perch:variant id="productID" />" >View additional details</a></p>
-<!--Begin price and Add to Cart-->
-                              <perch:input id="productID" type="hidden" value="<perch:variant id="price" type="hidden" />" />
-                                 <perch:if exists="price">
-                                    <div class="buy">
-                                       <span class="price">
-                                          <perch:variant id="price" type="shop_currency_value" />
-                                       </span>
-                                          <button class="btn button">Add to Cart</button>
-                                             <perch:input type="cms" />
-                                    </div>
-                                 </perch:if>
+
+<!--Begin Price and Add to Cart area-->
+                              <perch:if exists="has_variants">
+                                 <div class="buy">
+                                    <span class="price">
+                                       <p class="bold">
+                                          <span class="normal">
+                                             <perch:variant id="title_var1" type="text" />:  
+                                          </span>
+                                             <perch:variant id="price" type="shop_currency_value" />
+                                       </p>
+                                    </span>
+
+                                       <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
+
+                                          <perch:input id="product" type="hidden" value="<perch:variant id="productID" env-autofill="false" />" />
+<!--*
+                                          <perch:input type="submit" value="Add to cart" />
+*-->
+                                             <button class="btn button">Add to Cart</button>
+                                                <perch:input type="cms" />
+                                       </perch:form>
+                                 </div>
+                              </perch:if>
+<!--End Price and Add to Cart area-->
                   </div><!--Close item details area-->
             </div><!--Close grid area-->
          </perch:variants>
-
-               <perch:if exists="has_variants">
-                  <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
-                     <perch:input id="product" type="hidden" value="<perch:shop id="productID" env-autofill="false" />" />
-                        <perch:input type="submit" value="Add to cart" />
-                  </perch:form>
-               </perch:if>
-
       </li>
    <perch:after>
             </ul>
