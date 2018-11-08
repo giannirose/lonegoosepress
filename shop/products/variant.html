@@ -1,10 +1,40 @@
-<perch:shop id="sku" type="text" label="SKU" required="true" order="1" />
+<p>This is variant.html</p>
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
+<perch:shop id="sku" type="text" label="SKU" required="true" />
+<!--Heading- the main title and info on the item-->
 
-<perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="m" min="0" step="any" />
+<perch:shop id="title_var" type="text" label="Title" divider-before="Enter the title, optional subtitle, authors and artists information for the first variant only. This will be the heading for the variants listing page." />
+<perch:shop id="subtitle_var" type="text" label="If one exists, add the sub-title for the item" />
+<perch:shop id="authors_var" type="textarea" label="Enter all text for the authors line" markdown="true" editor="markitup" html="true" size="s" />
+<perch:shop id="artists_var" type="textarea" label="Enter all text for the artists line" markdown="true" editor="markitup" html="true" size="s" />
+<perch:shop id="intro_var" type="textarea" label="An introduction to the list of variants. Enter this information for the first variant only." markdown editor="markitup" html="true" size="s" />
+
+
+<perch:shop id="title_var1" type="smarttext" label="Enter the title for this variant" divider-before="Listing and Detail page information. Variants will all be listed on a single page—the listing page. One can link from that page to each item's detail page."  />
+<!--Images-->
+<perch:shop id="listingImage" type="image" label="This is the lead image on the listing page"  bucket="images" />
+<perch:shop id="detailImage" type="image" label="This is the lead image on the detail page"  width="800" bucket="images"/>
+<!--Written descriptions-->
+
+
+<perch:shop id="desc_var1" type="textarea" label="Enter the lead information for the listing page. This will appear before the Add to Caft button." markdown editor="markitup" />
+
+<perch:shop id="desc_detail" type="textarea" label="Enter the lead information for the detail page. This will appear before the Add to Cart button." markdown editor="markitup" />
+
+<perch:shop id="desc_notes" type="textarea" label="These additional notes about the item appear below the Add to Cart button" markdown editor="markitup" />
+
+<perch:shop id="desc_long" type="textarea" label="This is the long description of the item. It spans the page below the image/information pair." markdown editor="markitup" />
+
+<!--Pricing, stock and shipping details-->
+
+<perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="m"  step="any" />
+
+<!--*
 <perch:shop id="sale_price" type="shop_currency_value" label="Sale price" size="m" min="0" step="any" />
 <perch:shop id="trade_price" type="shop_currency_value" label="Trade price" size="m" min="0" step="any" />
 <perch:shop id="on_sale" type="checkbox" value="1" label="Use sale price" />
 <perch:shop id="tax_group" type="shop_tax_group" label="Tax group" required="true" />
+*-->
 
 <perch:shop id="stock_status" type="shop_stock_status" label="Stock status" divider-before="Stock" required="true" />
 <perch:shop id="stock_level" type="number" label="Stock level" size="s" />
@@ -14,5 +44,38 @@
 <perch:shop id="width" type="number" label="Width" size="s" />
 <perch:shop id="height" type="number" label="Height" size="s" />
 <perch:shop id="depth" type="number" label="Depth" size="s" />
+<!--*
+                         <perch:if exists="price_variant">
+                          <p>price variant section in variant.html</p>
+                              <div class="buy">
+                                <span class="price">
+                                    <perch:shop id="price_variant" type="shop_currency_value!" />
+                                </span>
+                                    <button class="btn button">Add to Cart</button>
+                                        <perch:input type="cms" />
+                              </div>
+                           </perch:if>
+*-->
 
-<perch:shop id="description_var1" type="textarea" />
+<!--Flexi-folio repeater-->
+ <perch:repeater id="flexi_images" label="Detail Images: Click the Add an Item button on the lower right, and use the same button to add successive images." notes-before="Editor- These images will be arrayed below the Main Image and Text. They are intended to provide details." >
+
+
+         <perch:shop id="image_jr" type="image" bucket="images" />
+
+               <perch:shop id="caption_jr" type="textarea" label="This caption appears underneath the image" markdown="true" editor="simplemde" size="xs" help="For a paragraph: Return-Return ; for a single line: Spacebar-Spacebar-Return: for a copyright symbol, paste or type: &amp;copy;"  html="true" />
+</perch:repeater>
+
+</perch:form>
+
+<!--*
+<perch:shop id="sale_price" type="shop_currency_value" label="Sale price" size="m" min="0" step="any" />
+<perch:shop id="trade_price" type="shop_currency_value" label="Trade price" size="m" min="0" step="any" />
+<perch:shop id="on_sale" type="checkbox" value="1" label="Use sale price" />
+<perch:shop id="tax_group" type="shop_tax_group" label="Tax group" required="true" />
+*-->
+
+ 
+
+
+
