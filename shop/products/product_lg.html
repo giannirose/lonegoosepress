@@ -30,7 +30,7 @@
 <!--Begin grid area-->
          <div class="product boxer ">
             <div class="gridimg">
-               <perch:if exists="productImage">
+               <perch:if exists="detailImage">
                   <img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
                </perch:if>
             </div>
@@ -133,18 +133,5 @@
                      </div>
                   </perch:after>
                   <!--End flexi-folio-->
-
-                  <div class="product boxer">
-
-                     <div class="gridimg-vers">
-                           <img src="<perch:shop id="detailImage_var2" type="image" />" >
-                     </div>
-                        <div class="boxed-vers">
-                           <perch:shop id="desc_var2" type="textarea" />
-
-                           <perch:shop id="desc_info_var2" type="textarea" />
-                        </div>
-                  </div>
-
 
 </perch:form>
