@@ -1,5 +1,4 @@
 <?php
-
 	if (perch_member_logged_in()) {
 		PerchSystem::redirect('/shop/checkout');
 	}
@@ -9,21 +8,32 @@
 			'section_heading' => 'shop',
 		));
 
-	PerchSystem::set_var('shipping_weight', perch_shop_get_shipping_weight());
-	perch_shop_registration_form();	
+//	PerchSystem::set_var('shipping_weight', perch_shop_get_shipping_weight());
+		
+//		perch_shop_registration_form();
 
-	perch_layout('shop.sidebar', array(
-			'promo' => false,
-			'shipping' => false,
-			'currency' => false,
-			'minicart' => true,
-			'login' => true,
+
+  perch_shop_registration_form([
+    'template' => 'checkout/customer_create_passwordless.html'
+  ]);
+
+
+
+//	perch_layout('shop.sidebar', array(
+//			'promo' => false,
+//			'shipping' => false,
+//			'currency' => false,
+//			'minicart' => false,
+//			'login' => true,
 		));
 ?>
 
-<p>The register.php page in shop.</p>
+<p>in pages/shop/register.php</p>
 
 <?php
-
 	perch_layout('global.below');
 ?>
+
+
+
+
