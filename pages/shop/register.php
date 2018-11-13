@@ -25,7 +25,7 @@
 //			'currency' => false,
 //			'minicart' => false,
 //			'login' => true,
-		));
+//		));
 ?>
 
 <p>in pages/shop/register.php</p>
