@@ -19,21 +19,16 @@
 
 
 
-//	perch_layout('shop.sidebar', array(
-//			'promo' => false,
-//			'shipping' => false,
-//			'currency' => false,
-//			'minicart' => false,
-//			'login' => true,
-//		));
+	perch_layout('shop.sidebar', array(
+			'promo' => false,
+			'shipping' => false,
+			'currency' => false,
+			'minicart' => false,
+			'login' => true,
+			'register' => true,
+		));
 ?>
-
-<p>in pages/shop/register.php</p>
 
 <?php
 	perch_layout('global.below');
 ?>
-
-
-
-
