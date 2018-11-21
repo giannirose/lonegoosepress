@@ -3,14 +3,16 @@
 
 <perch:if id="product_count" match="gt" value="0">
 	<h2>Your cart (<perch:shop id="item_count" />)</h2>
-	<perch:form id="cart" app="perch_shop">ffg
+	<perch:form id="cart" app="perch_shop">
 		
 		<perch:input type="submit" value="Update" hidden="true" aria-hidden="true" />
 		
 		<table class="cart">
 			<tr>
-				<th></th>
+<!--
+				<th>Image</th>
 				<th>Code</th>
+-->
 				<th>Item</th>
 				<th>Quantity</th>
 				<th>Price</th>
@@ -18,17 +20,29 @@
 			</tr>
 			<perch:cartitems>
 				<tr>
+<!--
 					<td><perch:cartitem id="productImage" type="image" width="80" height="80" density="1.6" crop="true" output="tag" /></td>
+-->
+<!--
 					<td><perch:cartitem id="sku" /></td>
+-->
 					<td>
 						<b><perch:cartitem id="title" /></b>
+						<div>
+						<perch:cartitem id="authors" striptags/>
+						</div>
+<!--
 						<p><i><perch:cartitem id="variant_desc" /></i></p>
 						<div class="desc">
 							<perch:cartitem id="description" type="textarea" markdown="true" />
 						</div>
+-->
+<div>&nbsp;</div>
+<div>
 						<button type="submit" class="remove_cart" name="del:<perch:cartitem id="identifier" />" value="1">
                         	Remove from cart
                         </button>
+</div>
 					</td>
 					<td><perch:input id="qty:<perch:cartitem id="identifier" />" value="<perch:cartitem id="quantity" />" type="number" min="0" /></td>
 					<td class="money"><perch:cartitem id="price_without_tax" /></td>
@@ -54,7 +68,7 @@
 					</td>
 				</tr>
 			<perch:else />
-				<tr class="total">
+				<tr class="total">				
 					<th colspan="5">
 						Total
 					</th>
@@ -63,6 +77,17 @@
 					</td>
 				</tr>
 			</perch:if>
+
+			<tr class="shipping">
+				<th colspan="5">
+					Shipping
+				</th>
+				<td class="shipping">
+					<perch:shop id="total_shipping_formatted" />
+				</td>
+			</tr>
+
+
 			<tr class="total">
 				<th colspan="5">
 					Tax
@@ -109,7 +134,7 @@
 </div>
 </div>
 
-
+<perch:showall/>
 
 
 
@@ -160,6 +185,12 @@ i {
 	padding: 0;
 	margin: 0;
 	text-decoration: underline;
+}
+.cart .shipping,
+.cart .money,
+.cart .shipping th,
+.cart .total th {
+	text-align: right;
 }
 
 input[type=number] {
