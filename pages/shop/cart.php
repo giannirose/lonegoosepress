@@ -9,12 +9,11 @@
 	perch_shop_cart([
 		'template' => 'cart/cart.html',
 		]);
-
-	perch_layout('shop.sidebar', array(
-			'promo' => true,
-			'shipping' => false,
-			'currency' => true,
-		));
+//	perch_layout('shop.sidebar', array(
+//			'promo' => false,
+//			'shipping' => false,
+//			'currency' => true,
+//		));
 
 ?>
 
