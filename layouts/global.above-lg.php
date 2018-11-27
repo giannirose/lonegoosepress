@@ -1,5 +1,4 @@
-<?php
-	
+<?php	
 	perch_content_create('Site name', array(
 		'template'   => 'home/site_name.html',
 		'shared'     => true,
@@ -23,18 +22,22 @@
 	$body_class = '';
 	$parts = explode('/', $Perch->get_page());
 	if (isset($parts[1]) && $parts[1]!='index.php') $body_class = $parts[1];
+?>
 
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
 	<title><?php perch_layout_var('title') ?> - <?php echo $meta['site_name']; ?> </title>
 	<?php perch_page_attributes(); ?>
+		<?php perch_get_css(); ?>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="/favicon.ico" />
 	<link rel="stylesheet" href="/assets/css/nest-lg.css" />
 	<link rel="stylesheet" media="only screen and (min-width: 960px)" href="/assets/css/nest-wide-lg.css" />
+
+		<?php perch_get_css(); ?>
 	<?php
 		if (perch_layout_var('carousel', true)) {
 			echo '	<link href="/assets/css/responsive-carousel.css" rel="stylesheet" />
@@ -57,6 +60,11 @@
 	  })(document);
 	</script>
 </head>
+
+	<div class="header-cart">		
+			<h1 class="header"><img src="/perch/resources/images/lonegoose.png" alt="lone goose image" width="72" height="72" /> lone goose press</h1>
+	</div>
+
 <body class="<?php echo PerchUtil::html($body_class, true); ?>">
 <!--	<div class="navbar topbar">
 	<nav>
