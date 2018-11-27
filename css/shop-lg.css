@@ -1,4 +1,12 @@
+.wrapper {
+	margin: 0 5vw;
+}
 
+.primary {
+    width: 50%;
+    float: left;
+    clear: left;
+}
 .cart {
 	width: 100%;
 	border-collapse: collapse;
@@ -26,6 +34,69 @@
 
 .desc {
 	font-size: small;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+textarea, 
+select {
+	background-color: rgb(239, 239, 239);
+	border          : 0;
+	box-shadow      : inset 0px 2px 6px rgb(217, 217, 217);
+	padding         : 0.5em;
+	font-size       : 87.5%;
+	color           : rgb(54, 54, 54);
+	margin-bottom   : 1em;
+}
+
+input[type=submit]
+ {
+	background-color: hsla(9, 58%, 30%, .5);
+	border          : 0;
+	box-shadow      : inset 0px 2px 6px rgb(217, 217, 217);
+	padding         : 0.5em;
+	font-size       : 87.5%;
+	color           : hsla(47, 100%, 97%, 1);
+	margin   		 : .5em auto 1em auto;
+	width           : 100%;
+}
+
+input[type=submit]:hover
+	{
+		text-decoration: underline;
+	}
+
+h6.checkout	{
+	background-color: hsl(9, 58%, 30%);
+	border          : 0;
+	box-shadow      : inset 0px 2px 6px rgb(217, 217, 217);
+	padding         : 0.5em;
+	font-size       : 125%;
+	color           : hsla(47, 100%, 97%, 1);
+	margin   		 : .5em auto 1em auto;
+	width           : 100%;
+	text-align      : center;
+}
+h6.checkout a 	{
+	color: hsla(47, 100%, 97%, 1);
+}
+
+
+select {
+	font-size         : 100%;
+	width             : 3.5rem;
+	max-width         : 100%;
+	-moz-box-sizing   : border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing        : border-box;
+}
+
+label {
+	font-size: 87.5%;
+	display  : block;
 }
 
 b {
