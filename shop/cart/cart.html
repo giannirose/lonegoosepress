@@ -1,6 +1,9 @@
 <div class="wrapper cols2-nav-right">	
 	<div class="primary-content">
 
+		<p class="cart"><a href="/shop/books">Continue shopping books</a></p>
+		<p class="cart"><a href="/shop/broadsides">Continue shopping broadsides</a></p>
+
 <perch:if id="product_count" match="gt" value="0">
 	<h2>Your cart (<perch:shop id="item_count" />)</h2>
 	<perch:form id="cart" app="perch_shop">
@@ -44,7 +47,10 @@
                         </button>
 </div>
 					</td>
+<!--
 					<td><perch:input id="qty:<perch:cartitem id="identifier" />" value="<perch:cartitem id="quantity" />" type="number" min="0" /></td>
+-->
+					<td><perch:input id="qty:<perch:cartitem id="identifier" />" value="<perch:cartitem id="quantity" />" type="select" options="1,2,3,4,5" min="0" /></td>
 					<td class="money"><perch:cartitem id="price_without_tax" /></td>
 					<td class="money"><perch:cartitem id="total_without_tax_formatted" /></td>
 				</tr>
@@ -87,7 +93,7 @@
 				</td>
 			</tr>
 
-
+<!--
 			<tr class="total">
 				<th colspan="5">
 					Tax
@@ -96,6 +102,8 @@
 					<perch:shop id="total_tax_formatted" />
 				</td>
 			</tr>
+-->
+
 			<tr class="total">
 				<th colspan="5">
 					Grand total
@@ -113,13 +121,14 @@
 			</perch:label>
 		</div>
 -->
+
 		<perch:input type="submit" value="Update" />
 
 	</perch:form>
 
-	<p>
+	<h6 class="checkout">
 		<a href="checkout">Checkout now</a>
-	</p>
+	</h6>
 
 <perch:else />
 <h1>Your cart</h1>
@@ -135,6 +144,7 @@
 </div>
 
 <perch:showall/>
+
 
 
 
