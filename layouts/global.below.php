@@ -1,4 +1,5 @@
 	</div>
+<!--
 	<div class="navbar">
 		<nav>
 			<ul class="fin">
@@ -7,6 +8,7 @@
 
 		</nav>
 	</div>
+-->
 	<script src="/assets/js/jquery.js" type="text/javascript"></script>
 	<?php 
 		if (perch_layout_var('carousel', true)) {
