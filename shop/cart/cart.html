@@ -1,8 +1,8 @@
-<div class="wrapper cols2-nav-right">	
+<div class="cart-content margins">	
 	<div class="primary-content">
 
-		<p class="cart"><a href="/shop/books">Continue shopping books</a></p>
-		<p class="cart"><a href="/shop/broadsides">Continue shopping broadsides</a></p>
+		<p class="cart margins"><a href="/shop/books">Continue shopping books</a></p>
+		<p class="cart margins"><a href="/shop/broadsides">Continue shopping broadsides</a></p>
 
 <perch:if id="product_count" match="gt" value="0">
 	<h2>Your cart (<perch:shop id="item_count" />)</h2>
@@ -84,9 +84,16 @@
 				</tr>
 			</perch:if>
 
+<!--from Perch Forum to avoid PHP error-->
+<!--*
+<perch:if id="shipping_weight" match="gt" value="0">
+Shipping: <perch:shop id="shipping_method" type="hidden" /> 
+<perch:shop id="shipping_without_tax" type="hidden" format="$:%.2n" />
+</perch:if>
+*-->
 			<tr class="shipping">
 				<th colspan="5">
-					Shipping
+					Shipping & Handling
 				</th>
 				<td class="shipping">
 					<perch:shop id="total_shipping_formatted" />
@@ -124,16 +131,18 @@
 
 		<perch:input type="submit" value="Update" />
 
+	<h6 class="checkout">
+		<a href="checkout">Register & Checkout</a>
+	</h6>		
+
 	</perch:form>
 
-	<h6 class="checkout">
-		<a href="checkout">Checkout now</a>
-	</h6>
+
 
 <perch:else />
 <h1>Your cart</h1>
 
-<p>Your cart is empty.</p>
+<p class="text-center">Your cart is empty.</p>
 </perch:if>
 
 
