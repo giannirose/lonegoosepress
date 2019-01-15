@@ -1,7 +1,7 @@
 <?php
-//Section below isthe perch-supplied set-up for manual processing
+//Section below is the perch-supplied set-up for manual processing
 	if (!perch_member_logged_in()) {
-		PerchSystem::redirect('/register');
+		//PerchSystem::redirect('/shop/register');
 	}
 
 //The following was the default entry	
@@ -18,9 +18,12 @@
 //Following  are from Perch Documentation for Paypal Express
 if (perch_member_logged_in()) {
 
-  //your 'success' return URL
-  $return_url = 'http://staging.lonegoosepress.com/payment';
-  $cancel_url = 'http://staging.lonegoosepress.com/index.php/';
+  //your 'success' return URL for staging.lonegoosepress.com
+//  $return_url = 'http://staging.lonegoosepress.com/payment';
+//  $cancel_url = 'http://staging.lonegoosepress.com/index.php/';
+
+  $return_url = 'http://lgoose.loc/store/payment';
+  $cancel_url = 'http://lgoose.loc/';
 
   perch_shop_checkout('paypal-express', [
     'return_url' => $return_url,
@@ -38,6 +41,8 @@ if (perch_member_logged_in()) {
     }
 //End part 2 of documentation
 
+    
+
 	perch_layout('global.above', array(
 			'title'           => perch_page_title(true),
 			'section_heading' => 'shop',
@@ -45,9 +50,9 @@ if (perch_member_logged_in()) {
 
 
     // Show the cart with a non-interactive template
-    perch_shop_cart([
-        'template'=>'cart/cart_static.html'
-    ]);
+   // perch_shop_cart([
+   //     'template'=>'cart/cart_static.html'
+   // ]);
 
     // Show the order addresses
     perch_shop_order_addresses();
@@ -55,15 +60,14 @@ if (perch_member_logged_in()) {
     // Display the form with the T&Cs checkbox
     perch_shop_form('checkout/confirm.html');
 
-
-
-
 	perch_layout('shop.sidebar', array(
 			'promo' => false,
 			'shipping' => false,
 			'currency' => false,
 			'minicart' => false,
 			'social' => false,
+      'login' => true,
+      'register' => true,
 		));
 
 	perch_layout('global.below');
