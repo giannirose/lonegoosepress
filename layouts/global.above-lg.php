@@ -96,8 +96,9 @@
 			}
 		?>
 
-<!--The folllowing sets a central title or title/image on the cart page-->
+<!--The folllowing sets a central title or title/image on the cart page
 		<div class="primary">
+-->
 <!--*			<?php
 				if (perch_layout_var('section_heading', true)) {
 					perch_layout('headings/'.perch_layout_var('section_heading', true));
