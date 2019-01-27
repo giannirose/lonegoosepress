@@ -1,0 +1,26 @@
+<div class="page-content">
+	<div class="folio">
+		<div class="full-content">
+			<h2 class="text-center"><perch:content id="page_title" type="smarttext" label="Title for this page" required="true" divider-before="Enter the title and introductory information for the page" /></h2>
+		</div>
+				<div class="intro-img">
+
+
+						<figure class="figure-ctr">
+							<img src="<perch:content type="image" id="image" label="Image" bucket="images" />"  alt="<perch:content type="text" id="alt" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page." required="true"  />" />
+								<figcaption class="figure-caption">
+									<perch:if exists="caption">
+									<perch:content id="caption" type="textarea" label="Caption will appear below the image." markdown="true" editor="markitup" html="true" size="s"/>
+								</perch:if> 
+							</figcaption>
+						</figure>
+
+				</div>
+					<!--Add text-->
+					<div class="intro-txt">
+						<perch:content id="desc_category" type="textarea" label="Add introductory information for the list of products" editor="markitup" markdown size="s" />
+					</div>
+
+	</div>
+</div>
+
