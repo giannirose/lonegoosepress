@@ -1,17 +1,26 @@
-<perch:shop id="title" type="text" label="Title" order="1" />
-<perch:shop id="subtitle" type="text" label="Optional: Sub-title for the item" order="2" />
-<perch:shop id="authors" type="textarea" label="Enter all text for the authors line" markdown="true" editor="markitup" size="s" order="3"/>
-<perch:shop id="artists" type="textarea" label="Enter all text for the artists line" markdown="true" editor="markitup" size="s" order="4"/>
-<perch:shop id="sorting_number" type="text" label="Number the item, which will determine the order by which the item will be displayed on the list page." order="5"/>
-<perch:shop id="detailImage" type="image" label="This image is on the single item detail page."  width="800" bucket="images" order="6"/>
+<perch:shop id="title" type="text" label="Title" />
 
-<perch:shop id="productImage" type="image" label="This image appears on the multiple item listing page, the page where all the similar products appear." width="80" height="80" density="1.6" crop="true" bucket="images" order="7"/>
+<perch:shop id="slug" type="slug" editable="true" indelible="true" label="Slug" for="title"  divider-before="Meta data" help="The slug appears in the URL, the address of the site. It pre-selects the title; which can be shortened when the product is first entered. Once saved, it is not editable. This prevents broken links."/>
 
-<perch:shop id="description" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" order="8"/>
+<perch:shop id="sku" type="text" label="SKU" required="true" help="John set up books beginning at 100.001, with 100 being the general category and individual items sequential from 001. Broadsides begin at 200.001"/>
 
-<perch:shop id="desc_info" type="textarea" label="These are secondary item details. They appear just below the &#34;Add to Cart&#34; button." markitup markdown="true"  order="9"/>
+<perch:shop id="sorting_number" type="text" label="Number the item. Sequential numbers determine the order of the listing page items." help="John uses the first number of the category followed by the last two digits of the six-number SKU." />
 
-<perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup" order="10"/>
+<perch:shop id="subtitle" type="text" label="Optional: Sub-title for the item"  divider-before="Page Details"/>
+
+<perch:shop id="authors" type="textarea" label="Enter all text for the authors line" markdown="true" editor="markitup" size="s"  />
+
+<perch:shop id="artists" type="textarea" label="Enter all text for the artists line" markdown="true" editor="markitup" size="s" />
+
+<perch:shop id="description" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" />
+
+<perch:shop id="detailImage" type="image" label="This image is on the single item detail page."  width="800" bucket="images" />
+
+<perch:shop id="productImage" type="image" label="This image appears on the multiple item listing page, the page where all the similar products appear." width="80" height="80" density="1.6" crop="true" bucket="images" />
+
+<perch:shop id="desc_info" type="textarea" label="These are secondary item details. They appear just below the &#34;Add to Cart&#34; button." markitup markdown="true"  />
+
+<perch:shop id="describe_long" type="textarea" label="This is a longer description of the item. It appears below the principal item image and the item details." html="true" markdown editor="markitup" />
 <!--*
 <perch:shop id="heading_vers_1" type="textarea" label="This heading identifies the first item when multiple versions exist. Example: Opening the Mouth of the Dead." size="xs" markdown editor="markitup"/>
 
@@ -22,11 +31,7 @@
 	<perch:input type="submit" value="Add to Cart" />
 </perch:form>
 
-<perch:shop id="slug" type="slug" editable="true" indelible="true" label="Slug" for="title sku" order="11" divider-before="Meta data" />
-
-<perch:shop id="sku" type="text" label="SKU" required="true" order="12" />
-
-<perch:shop id="status" type="shop_status" label="Status" />
+<perch:shop id="status" type="shop_status" label="Status" divider-before="Product Details" />
 
 <perch:shop id="brand" type="shop_brand" label="Brand" allowempty="true" divider-before="Item classification" />
 
@@ -68,20 +73,13 @@
 *-->
 <!--End featured item area-->
 
- <perch:repeater id="flexi_images" label="Detail Images: Click the Add an Item button on the lower right, and use this button to add successive images." notes-before="Editor- These images will be arrayed below the Main Image and Text. They are intended to provide details." >
+ <perch:repeater id="flexi_images" label="Detail Images: Click the Add an Item button on the lower right, and use this button to add successive images." notes-before="Editor- One can add one or a series of detail images with captions." >
 
          <perch:shop id="image_jr" type="image" bucket="images" />
 
 					<perch:shop id="caption_jr" type="textarea" label="This caption appears underneath the image" markdown="true" editor="simplemde" size="xs" help="For a paragraph: Return-Return ; for a single line: Spacebar-Spacebar-Return: for a copyright symbol, paste or type: &amp;copy;"  html="true" />
 
 </perch:repeater>
-<!--*
-<perch:repeater id="versions" label="Add an additional version of an item here; example, a paperback version of a limited edition printing.">
 
-<perch:shop id="heading_vers_2" type="textarea" label="This heading identifies the second item when multiple versions exist. Example: Opening the Mouth of the Dead, where both art and paperback versions exist." markdown editor="markitup" size="xs"/>
 
-<perch:shop id="detailImage_two" type="image" label="This image is for a second version of an item"  width="800" bucket="images" />
-
-<perch:shop id="description_two" type="textarea" label="These are the principal item details; e.g., publication date, size, etc." editor="markitup" markdown="true" size="s" />
-</perch:repeater>
-*-->
+<perch:shop id="text_modal" type="textarea" label="Add the publication text to be shown in a modal window; e.g., the broadside text" markdown editor="markitup" html="true" help="To add a paragraph: hit Return-Return; to create a single line: Spacebar-Spacebar-Return: to create a copyright symbol, paste or type: &amp;copy;"/>
