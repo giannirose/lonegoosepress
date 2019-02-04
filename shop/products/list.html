@@ -1,7 +1,11 @@
-<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
-   <div class="product boxer list-page">
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart">
+   <div class="product boxer list-page page-content">
       <div class="gridimg">
-         <img src="<perch:shop id="productImage" type="image" width="420" height="420" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
+         <perch:if exists="productImage">
+            <img src="<perch:shop id="productImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
+         <perch:else>
+            <img src="<perch:shop id="detailImage" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />">
+         </perch:if>
       </div>
          <div class="box shop minor boxed">
             <h3><a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:shop id="slug" type="slug" />/"><perch:shop id="title" type="text" /></a></h3>
