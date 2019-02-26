@@ -1,5 +1,7 @@
-<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart.php">
-   <perch:before>
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart">
+
+<perch:before>
+  <div class="page-content">
 <!--heading--> 
       <perch:variants>
          <div class="text-center center-content">
@@ -24,7 +26,7 @@
          <perch:variants>
             <div class="product boxer">                       
                <div class="gridimg"> 
-                  <img src="<perch:variant id="listingImage" type="image" />" >
+                  <a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:variant id="slug"/>/<perch:variant id="productID" />" ><img src="<perch:variant id="listingImage" type="image" />" > </a>
                </div>
                   <div class="boxed">
                      <h3><a href="/shop/<perch:categories id="category" set="products"><perch:category id="catSlug" /></perch:categories>/<perch:variant id="slug"/>/<perch:variant id="productID" />" ><perch:variant id="title_var1" type="smarttext" /></a></h3>
@@ -43,7 +45,7 @@
                                        </p>
                                     </span>
 
-                                       <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart-lg.php">
+                                       <perch:form id="add_to_cart" app="perch_shop" action="/shop/cart">
 
                                           <perch:input id="product" type="hidden" value="<perch:variant id="productID" env-autofill="false" />" />
 <!--*
@@ -61,6 +63,7 @@
       </li>
    <perch:after>
             </ul>
+</div>
    </perch:after>
 
 <!--Template from Hussein- This successfully renders links to the variants with variantID slug added-->
