@@ -46,7 +46,7 @@ box-sizing: border-box;
 }
 
 p 	{
-	margin-bottom: .5em;
+	padding-bottom: .5em;
 }
 
 html 	{
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Gill Sans","Gill Sans MT",Calibri,sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: .5em 0;
+    padding: .5em 0;
 }
 
 h2 	{
@@ -644,7 +644,7 @@ article .thumbnail {
   display: flex;
   justify-content: center;  
   flex-flow: row wrap;
-  padding: 1.5rem 0 0 0;
+  padding: .5rem 0 0 0;
 	}
 }
 /*
@@ -672,7 +672,7 @@ article .thumbnail {
 
 @media (min-width: 550px) {
 .folio-wrapper ul li {
-	padding: 10px 20px;
+	padding: 10px;
 	}
 }
 
@@ -712,7 +712,7 @@ figure {
 @media screen and (min-width: 550px) {
 	figure	{
 	min-width: 128px;
-	margin: 1rem auto 1rem auto;
+	margin: .5rem auto .5rem auto;
 	}
 }
 
@@ -1037,8 +1037,6 @@ img 	{
 	text-align: left;
 }
 
-
-
 article .cite {
 	color: #767676;
 	font-style: italic;
@@ -1071,6 +1069,7 @@ h2.centered-content 	{
     font-size: .8125rem;
     line-height: 1.35em;
     margin-bottom: 0;
+    padding-top: .35em;
 }
 
 .worktypes .figure-caption 	{
@@ -1541,7 +1540,7 @@ button 	{
     height: 2.75rem;
 }
 
-.email-subscribe 	input[type="email"] 	{
+.email-subscribe 	input[type="email"], input[type="firstname"], input[type="text"] 	{
 
     display: block;
     box-sizing: border-box;
@@ -1587,7 +1586,7 @@ button 	{
 		height: 2.75rem;
 }
 
-.email-subscribe 	input[type="email"] 	{
+.email-subscribe 	input[type="email"], input[type="firstname"] 	{
     font-size: 1.15rem;
 }
 
@@ -1607,19 +1606,6 @@ button 	{
 
 #subscribe-form 	{
 	margin-bottom: 3.5rem;
-}
-
-.post h2 	{
-	font-size: 2rem;
-}
-
-.post h3 	{
-    font-size: 1.65em;
-}
-
-.image-top-blog img 	{
-	max-width: 100%;
-	max-height: 192px;
 }
 
 .timelyalert {
@@ -1652,6 +1638,36 @@ button 	{
 .input-lg 	{
 	display: none;
 }
+
+.modalcolor  {
+    color: #fefefe;
+    padding: .5rem 1rem;
+}
+/*
+.email-subscribe input[type="firstname"] {
+
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    border: 1px solid #cacaca;
+    margin: 0 0 1rem;
+        margin-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #0a0a0a;
+    background-color: hsla(9, 58%, 30%, .05);
+    background-color: #fefefe;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    border-radius: 0;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+*/
+
 
 
 
