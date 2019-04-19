@@ -1,0 +1,24 @@
+	</div><!--end .wrapper div in global header-->
+
+		<footer class="layout-footer post">
+		<div class="wrapper">
+<!--
+			<ul class="social-links">
+				<li class="twitter"><a href="#" rel="me">Twitter</a></li>
+				<li class="facebook"><a href="#" rel="me">Facebook</a></li>
+				<li class="flickr"><a href="#" rel="me">Flickr</a></li>
+				<li class="linkedin"><a href="#" rel="me">LinkedIn</a></li>
+				<li class="rss"><a href="#">RSS</a></li>
+			</ul>
+-->
+			<div class="text-center">				
+				<small>Copyright &copy; <?php echo date('Y'); ?></small>
+			</div>
+		</div>
+	</footer>
+
+    	<?php PerchUtil::output_debug(); ?>
+
+				<?php perch_get_javascript(); ?> 
+</body>
+</html>
