@@ -1,0 +1,19 @@
+<div class="video">
+
+	<perch:if exists="text_youtube">
+		<br>
+			<perch:blog id="text_youtube" type="textarea" label="centered text to introduce the video" markdown editor="markitup" html="true" size="s" />
+	</perch:if>
+
+		<figure class="figure_ctr">
+
+			<perch:blog id="video" type="youtube" width="512" height="288" label="YouTube URL" output="embed" />
+
+				<figcaption class="figure-caption">
+					<perch:if exists="figure_caption">
+						<p><perch:blog id="figure_caption" type="text" label="Caption for the image" help="The caption appears as a line beneath the image. For a copyright symbol, type &amp;copy" html="true" /></p>
+					</perch:if> 
+				</figcaption>
+		</figure>
+
+</div>

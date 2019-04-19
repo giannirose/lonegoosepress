@@ -1,0 +1,32 @@
+<perch:before>
+   <div>
+      <div class="imgs-dual">
+</perch:before>
+         <perch:repeater id="img_img" label="Side by side images 50/50" notes-before="Images added here will array 2 across the page in equal-width columns.">
+
+            <div class="dual-img">            
+                  <figure class="figure-ctr">
+                     <img src="<perch:blog type="image" id="image" label="Add an image" bucket="images" />"  alt="<perch:blog type="text" id="cat_alt" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page." required="true"  />" />
+                        <figcaption class="figure-caption">
+                           <perch:if exists="cat_caption">
+                           <perch:blog id="cat_caption" type="textarea" label="Caption will appear below the image." markdown="true" editor="markitup" html="true" size="s"/>
+                        </perch:if> 
+                     </figcaption>
+                  </figure>
+            </div>
+         </perch:repeater>
+
+<perch:after>
+      </div>
+   </div>
+</perch:after>
+
+
+
+
+
+
+
+
+
+

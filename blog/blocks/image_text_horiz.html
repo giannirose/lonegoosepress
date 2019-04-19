@@ -1,0 +1,38 @@
+
+<!--*	<perch:if exists="figtexthead">
+	   <perch:content type="textarea" id="figtexthead" label="Add a headline or other introductory text here. This appears before any picture and spans the full width of the page." html="true" markdown="true" editor="simplemde" size="s" />
+	</perch:if>
+*--> 
+
+      <div class="<perch:blog type="select" id="choose_arrange" label="Choose from Main Image followed by Text, or Text followed by Main Image." options="Image on right with horizontally centered text on left|img-cntr-rt, Image on left with horizontally centered text on right|img-cntr-lft" allowempty="false" html="true" help="To place images right or left in the article with text that will be horizontally." />">
+      
+            <perch:repeater id="images" notes-before="Horizontal image and text, centered vertically; Click Add an Item to add image(s)" >
+               <perch:before>
+                  <div class="img-cntr">            
+               </perch:before>
+		             <figure class="figure">
+			               <a href="<perch:blog id="img_url" type="text" label="Enter the URL of the item being linked to." notes-before="Go to Assets, click the document and copy the document URL, then paste the URL here." order="10"/> "><img src="<perch:blog type="image" id="image_rt_art" label="Image" bucket="images" />" alt="<perch:blog type="text" id="alt" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page."  required="true" />" /> </a>
+
+                        <!--Begin caption and citation area-->
+                           <figcaption class="figure-caption">
+                              <perch:if exists="figure_caption">
+                                 <p><perch:blog id="figure_caption" type="smarttext" label="Caption for the image" help="The caption appears beneath the image. For a copyright symbol, write &amp;copy;" html="true" /></p>
+                              </perch:if> 
+                           </figcaption>
+                    <!--End Caption and Citation area-->
+		             </figure>
+               <perch:after>
+                  </div>
+               </perch:after>
+            </perch:repeater>
+            <!--</div>Close images-->
+
+               <div class="txt-cntr">
+                  <perch:blog type="textarea" id="figtext" label="Add content here" html="true" markdown="true" editor="markitup" size="m" help="Double-Return for a new paragraph; Spacebar-Spacebar-Return for a single line; &lt;hr&gt; on its own line for a horizontal rule; &amp;nbsp; for a non-breaking space (a way to add a paragraph line with no text, creating whitespace)." />
+               </div>
+      </div>
+
+
+
+
+                

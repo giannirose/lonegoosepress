@@ -1,0 +1,33 @@
+<div class="clearfix">
+<!--*	<perch:if exists="figtexthead">
+	   <perch:content type="textarea" id="figtexthead" label="Add a headline or other introductory text here. This appears before any picture and spans the full width of the page." html="true" markdown="true" editor="simplemde" size="s" />
+	</perch:if>
+*-->
+        <perch:repeater id="images" >
+            <perch:before>
+                <div class="article-imagerow">
+            </perch:before>
+		          <figure class="clearfix figure <perch:blog type="select" id="choose_arrange" label="Choose from Main Image followed by Text, or Text followed by Main Image." options="Image on right with wrapping text|figcap_rt, Image on left with wrapping text|figcap_lft" allowempty="false" html="true" help="To place images right or left in the article with text that will be to one side and then wrap below the image." />" >
+			         <img class="thumbnail" src="<perch:blog type="image" id="image_rt_art" label="Image" title="true" bucket="images" />" alt="<perch:blog type="text" id="alt" label="Description" help="A short and simple description of the image to be used by screen readers. This will not appear on the page."  required="true" />" />
+
+                    <!--Begin caption and citation area-->
+                    <figcaption class="figure-caption">
+                        <perch:if exists="figure_caption">
+                            <p><perch:blog id="figure_caption" type="smarttext" label="Caption for the image" help="The caption appears beneath the image. For a copyright symbol, write &amp;copy;" html="true" /></p>
+                        </perch:if> 
+                    </figcaption>
+                    <!--End Caption and Citation area-->
+		        </figure>
+            <perch:after>
+            </div>
+            </perch:after>
+        </perch:repeater>
+
+    <div class="article-textrow">
+        <perch:blog type="textarea" id="figtext" label="Add content here" html="true" markdown="true" editor="markitup" size="m" help="Double-Return for a new paragraph; Spacebar-Spacebar-Return for a single line; &lt;hr&gt; on its own line for a horizontal rule." />
+    </div>
+</div>
+
+
+
+                

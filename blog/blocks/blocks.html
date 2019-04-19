@@ -1,0 +1,82 @@
+<!--*<perch:content type="text" id="name_edit_item" label="Name for this item." help="Editor: This does not appear on the page. It gives a name to this item on this editing page, rather than Item1, Item2, etc." title="true" suppress="true"/>
+*-->
+<!--For blog, move the classes to post.html
+   <div class="article page-content">
+-->
+<!--
+         <div class="article-body body">
+-->
+                  <perch:blocks>
+
+                     <perch:block type="textarea" label="Text Area">
+                        <perch:template path="blog/blocks/text_block_large.html" />
+                     </perch:block>
+
+                        <perch:block type="centerimage" label="Center Image">
+                           <perch:template path="blog/blocks/image_ctr_art.html" />
+                        </perch:block>
+
+                           <perch:block type="img-txt-cntr" label="Image and text centered horizontally">
+                              <perch:template path="blog/blocks/image_text_horiz.html" />
+                           </perch:block>
+
+                           <perch:block type="dualimages" label="Images arrayed in two equal columns">
+                              <perch:template path="blog/blocks/img_img.html" />
+                           </perch:block>
+
+                           <perch:block type="leftimage" label="Image(s) with side content that wraps.">
+                              <perch:template path="blog/blocks/image_lft_rt_text.html" />
+                           </perch:block>
+
+                              <perch:block type="folio" label="Folio- Image Series">
+                                 <perch:template path="blog/blocks/flexi_folio_caption_block.html" />
+                              </perch:block>
+
+                                    <perch:block type="textarea" label="Centered Content (has wide margins)">
+                                    <perch:template path="blog/blocks/centered.html" />
+                                 </perch:block>
+                                 
+                                    <perch:block type="youtube" label="Video">
+                                       <perch:template path="blog/blocks/youtube.html" />
+                                    </perch:block>
+
+                  </perch:blocks>
+
+
+<!--*Sidebars- this is more used for articles
+<perch:group label="sidebar items- click arrow to expand this section" collapse>
+            <div class="article-left">
+               <perch:if exists="news_left">
+                  <div class="news-left">
+                     <perch:blog id="news_left" type="textarea" label="Add a news item" notes-before="This will appear at the top of the left aside. On small screens, this will appear above the main content." markdown editor="markitup" html="true" />
+                  </div>
+               </perch:if>
+               <perch:if exists="item_left">
+                  <div class="item-left">
+                     <perch:blog id="item_left" type="textarea" label="Add an item for the left aside column" notes-before="This will appear on the left aside under any new item. On small screens, this will appear under any main content." markdown editor="markitup" html="true" />
+                  </div>
+               </perch:if>
+            </div>
+
+               <div class="article-right">
+                  <perch:blog id="article_right" type="textarea" label="Add content for the right aside column" markdown editor="markitup" html="true" />
+               </div>
+   </perch:group>
+closed along with div at top     
+   </div>
+*-->
+
+
+<perch:blog id="slug_blog" type="slug" for="title" suppress />
+<!--*
+<perch:blog id="excerpt_blog" type="textarea" label="Add an excerpt to appear on the listing page" markdown editor="markitup" size="s" suppress divider-before="Excerpt to appear on the listing page"/>
+*-->
+<!--*
+<perch:blog type="checkbox" id="status_blog" label="Check to not publish- the item will not appear on the page. Unchecked item is published by default. ." divider-before="Publishing option" suppress="true" order="1" />
+*-->                                 
+
+ 
+
+
+
+
