@@ -23,26 +23,36 @@
 			<div class="grid-subscribe">	
 				<div class="intro-subscribe">
 					<h1 class="subscribe text-center">Subscribe</h1>
-						<p class="text-center">For publishing and events news, sign up with your email address.</p>
+						<p class="text-center">For publishing and events news, please sign up.</p>
 				</div>
-
+<!--
 			<div id="message" class="input-lg">
             <perch:label for="message">Message: required </perch:label>
                <perch:input type="textarea" id="message" label="Message" placeholder="Your message here" textile="true" editor="markitup" />
-                  <!--<perch:error for="message" type="required">Please add a message</perch:error>-->
+                  <perch:error for="message" type="required">Please add a message</perch:error>
          </div>
+-->
 
 
-            <div class="input-lg">
-            	<perch:input type="text" id="input_lg" antispam="honeypot" />
-                	<perch:label for="input_lg">Screenreaders please skip to the next input</perch:label>
-        		</div> 
 
 					<div class="email-subscribe">
+
+						<!--*
+							<perch:label for="firstname">Email</perch:label>
+						*-->
+							<perch:input type="firstname" id="firstname" required="true" placeholder="your first name" />
+								<perch:error for="firstname" type="required"><p class="subscribe-alert">Please add your first name</p></perch:error>
+								<!--<perch:error for="email" type="helper"><p class="subscribe-alert">You are already subscribed, so thank you!</p></perch:error>-->
+
+								<div class="input-lg">
+            					<perch:input type="text" id="input_lg" antispam="honeypot" />
+                				<perch:label for="input_lg">Last name: Screenreaders please skip to the next input</perch:label>
+        						</div> 
+
 						<!--*
 							<perch:label for="email">Email</perch:label>
 						*-->
-							<perch:input type="email" id="email" required="true" placeholder="you@company.com" />
+							<perch:input type="email" id="email" required="true" placeholder="your email address" />
 								<perch:error for="email" type="required"><p class="subscribe-alert">Please add your email address</p></perch:error>
 								<perch:error for="email" type="helper"><p class="subscribe-alert">You are already subscribed, so thank you!</p></perch:error>
 					</div>
