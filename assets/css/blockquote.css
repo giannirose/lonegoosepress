@@ -1,0 +1,91 @@
+/* Default Values */
+blockquote {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+blockquote::before {
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+  float: left;
+  padding-top: 2rem;
+  font-family: sans-serif;
+}
+
+blockquote::after {
+  content: no-close-quote;
+}
+
+blockquote::before {
+  color: #ccc;
+}
+
+blockquote {
+  font-family: serif;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  font-size: 1.15rem;
+  color: #666;
+}
+
+blockquote {
+  display: inline-block;
+  margin-right: 0;
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
+}
+
+blockquote p {
+  padding-left: 5rem;
+  padding-right: .5rem;
+  text-indent: -2rem;
+}
+
+blockquote.excerpt {
+  border-top: none;
+  border-bottom: none;
+  font-style: normal;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+blockquote.excerpt p {
+  padding-right: 0;
+  padding-left: 0;
+  text-indent: 0;
+}
+
+blockquote.excerpt::before {
+  content: none;
+}
+
+p.readmore {
+  margin-left: 40px;
+}
+
+.blockq {
+  text-align: center;
+}
+
+.article blockquote h6 {
+  padding-left: 0;
+  text-align: left;
+  padding-bottom: 0;
+}
+
+.article blockquote cite {
+  text-align: left;
+}
+
+blockquote h6 {
+  padding-left: 0;
+  text-align: left;
+  padding-bottom: 0;
+}
