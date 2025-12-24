@@ -1,1 +1,6 @@
-
+type: pages
+label: Articles
+info: "{{ page.date.toDate('d.m.Y') }}"
+template: article
+empty: No articulators yet
+sortBy: date desc
