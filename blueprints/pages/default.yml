@@ -1,0 +1,14 @@
+title: Default Page
+
+columns:
+  main:
+    width: 1/1
+    sections:
+      pages:
+        type: pages
+        template: 
+          - publications
+          - default
+
+
+
