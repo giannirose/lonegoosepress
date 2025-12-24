@@ -1,0 +1,96 @@
+Title: Cover Image
+
+accept:
+  mime: image/jpeg, image/png, image/svg+xml, image/jpg
+
+fields:
+  alt:
+    label: alternate text for images- required
+    type: text
+    icon: title
+    width: 1/2
+  imgclass:
+    label: Alter the size of the lead image on the page- default is Full
+    type: select
+    default: Full
+    options:
+      tiny: Tiny
+      small: Small
+      medium: Medium
+      large: Large
+      full: Full
+      help: Alter the size of the image on the page. Default is Full. Large = 85%; Medium = 70%; Small = 55%; Tiny = 40%
+    width: 1/2
+
+  caption:
+    label: Caption
+    type: writer
+    icon: text
+#    inline: true
+    width: 1/2
+  citation:
+    label: Citation
+    type: text
+    icon: text
+    help: Add photo credits, other citation or additional info for the image
+    width: 1/2
+    
+  sort:
+    type: number
+    width: 1/2
+  figclass:
+    label: Align the image on the page
+    type: select
+    help: Default is center, but figure can be moved to left or right margins
+    default: center
+    options:
+      center: Center
+      left: Left
+      right: Right
+    width: 1/2
+  # figurehead:
+  #   type: text
+  #   label: Header for the image
+  #   icon: title
+
+
+
+  # coverintro:
+  #   type: textarea
+  #   label: text to further explain the image in cover.yml
+    
+  # width:
+  #   label: Width- This sets the ratio for the browser; does not re-size the image
+  #   type: number
+  #   width: 1/2
+  # height:
+  #   label: height - This sets the ratio for the browser; does not re-size the image
+  #   type: number
+  #   width: 1/2
+  # ratio:
+  #   label: Ratio
+  #   type: select
+  #   placeholder: Auto
+  #   width: 1/2
+  #   options:
+  #     1/1: "1:1"
+  #     16/9: "16:9"
+  #     10/8: "10:8"
+  #     21/9: "21:9"
+  #     7/5: "7:5"
+  #     4/3: "4:3"
+  #     5/3: "5:3"
+  #     3/2: "3:2"
+  #     3/1: "3:1"
+  # crop:
+  #   label: 
+  #   type: toggle
+  #   width: 1/2
+
+   
+
+
+
+
+
+
