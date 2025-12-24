@@ -1,0 +1,32 @@
+title: Image
+
+accept:
+  mime: image/jpeg, image/png, image/svg+xml
+
+fields:
+  alt:
+    label: Alt Text
+    type: text
+    required: true
+  caption:
+    label: Caption
+    type: textarea
+  citation:
+    type: text
+  imgclass:
+    label: Alter the size of the image on the page- Full is 100%
+    type: select
+    default: Full
+    options:
+      small: 55%
+      medium: 70%
+      large: 85%
+      full: Full
+      help: The size chosen will convert to a % size of the full-size image
+    width: 1/2
+  sort:
+    type: number
+    width: 1/2
+
+
+  
