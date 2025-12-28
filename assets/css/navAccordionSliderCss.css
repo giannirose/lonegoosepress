@@ -1,0 +1,74 @@
+/* Layout wrapper so we can slide the content */
+#site-wrapper {
+  position: relative;
+  transition: transform 0.45s ease;
+  /* slower, smoother */
+}
+
+/* Slide-out menu */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  /* never more than half the screen */
+  max-width: 320px;
+  /* optional cap */
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.45s ease;
+  /* slower */
+  z-index: 9999;
+  padding: 1.5rem 1rem;
+  overflow-y: auto;
+}
+
+/* When menu is open */
+#mobile-nav.open {
+  transform: translateX(0);
+}
+
+/* Slide the main content */
+#site-wrapper.shifted {
+  transform: translateX(50vw);
+  /* match menu width */
+}
+
+/* Optional overlay */
+#menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+  z-index: 9998;
+}
+
+#menu-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menu styling */
+#mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mobile-nav .heading {
+  font-weight: bold;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+#mobile-nav .submenu a {
+  display: block;
+  padding: 0.3rem 0 0.3rem 1rem;
+  /* indent */
+  font-size: 0.95rem;
+}
