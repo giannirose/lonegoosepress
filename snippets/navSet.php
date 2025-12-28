@@ -2,6 +2,10 @@
   <?php snippet('navAccordion') ?>
 </div>
 
+<!-- <div class="smallScreen">
+  ?php snippet('navAccordionMobile') ?
+</div> -->
+
 <div class="smallScreen">
-  <?php snippet('navAccordionMobile') ?>
+  <?php snippet('navMobileSlider') ?>
 </div>
