@@ -1,0 +1,68 @@
+/* mobile toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: var(--light-grey);
+  color: var(--white);
+}
+
+button.mobile-toggle {
+  background: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .submenu {
+    display: none;
+    padding-left: 1rem;
+  }
+
+  .submenu.open {
+    display: block;
+  }
+
+  .accordion .link {
+    cursor: pointer;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.mobile-close {
+  display: none;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: var(--dark-grey);
+  text-align: right;
+  width: 100%;
+  margin: 0;
+}
+
+/* Show close button only when menu is active */
+@media (max-width: 768px) {
+  .main-nav.active .mobile-close {
+    display: block;
+  }
+}
+
+.mobileScreen {
+  display: block;
+}
