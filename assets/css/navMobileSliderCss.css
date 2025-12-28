@@ -1,0 +1,156 @@
+:root {
+  --primary-color: hsl(9, 58%, 30%);
+  --primary-light: hsla(9, 58%, 30%, .05);
+  --primary-text: #0a0a0a;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --light-grey: #ccc;
+  --light-yellow: #fffcf1;
+  --white: #f2f2f2;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --ch-width: 80ch;
+  --min-width: 768px;
+  --dark-grey: #333;
+}
+
+/* mobile toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: var(--light-grey);
+  color: var(--white);
+}
+
+button.mobile-toggle {
+  background: inherit;
+  text-align: left;
+  color: var(--primary-color);
+  margin-block-start: 1.25rem;
+  font-size: 1.5rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  /* Layout wrapper so we can slide the content */
+  #site-wrapper {
+    position: relative;
+    transition: transform 0.45s ease;
+    /* slower, smoother */
+  }
+
+  /* Slide-out menu */
+  #mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vw;
+    /* never more than half the screen */
+    max-width: 320px;
+    /* optional cap */
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    transform: translateX(-100%);
+    transition: transform 0.45s ease;
+    /* slower */
+    z-index: 9999;
+    padding: 1.5rem 1rem;
+    overflow-y: auto;
+  }
+
+  /* When menu is open */
+  #mobile-nav.open {
+    transform: translateX(0);
+  }
+
+  /* Slide the main content */
+  #site-wrapper.shifted {
+    transform: translateX(50vw);
+    /* match menu width */
+  }
+
+  /* Optional overlay */
+  #menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.45s ease;
+    z-index: 9998;
+  }
+
+  #menu-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Menu styling */
+  #mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #mobile-nav .heading {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--dark-grey);
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  #mobile-nav .submenu a {
+    display: block;
+    padding: 0.3rem 0 0.3rem 1rem;
+    /* indent */
+    font-size: 0.95rem;
+    color: var(--primary-color);
+  }
+
+  /* John Added */
+
+  #mobile-nav a {
+    text-decoration: underline;
+    color: var(--primary-color);
+  }
+
+  #mobile-nav li {
+    padding-block-start: .15rem;
+    padding-block-end: .2rem;
+    margin-block-end: .35rem;
+  }
+
+  #mobile-nav .submenu {
+    display: block;
+    max-height: max-content;
+    background-color: #fff;
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+
+    .submenu {
+      display: block;
+      padding-left: 1rem;
+    }
+  }
+
+  #mobile-nav .submenu li {
+    margin-block-end: .35rem;
+  }
+
+  #mobile-nav .submenu li a:hover {
+    background-color: var(--primary-light);
+  }
+
+  #mobile-nav li a:hover {
+    background-color: var(--primary-light);
+  }
