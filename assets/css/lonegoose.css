@@ -162,10 +162,10 @@ h4 {
   }
 }
 
-a {
+/* a {
   color: hsl(9, 58%, 30%);
   text-decoration: none;
-}
+} */
 
 a:hover {
   text-decoration: underline;
@@ -399,16 +399,6 @@ input[type=number] {
   text-align: center;
 }
 
-nav {
-  margin-block-end: 1.5rem;
-}
-
-@media screen and (min-width: 640px) {
-  nav {
-    margin-block-end: 2.5rem;
-  }
-}
-
 .navigation-main {
   display: flex;
   justify-content: center;
@@ -594,4 +584,17 @@ thead th {
 .honeypot {
   position: absolute;
   left: -9999px;
+}
+
+
+@media (min-width: 768px) {
+  .smallScreen {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .largeScreen {
+    display: none;
+  }
 }
