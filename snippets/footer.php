@@ -1,4 +1,5 @@
 <footer id="footer" class="footer">
+  <hr>
   <p><?= $site->address()->kt() ?></p>
   <p><?= $site->addressTwo()->kt() ?></p>
   <p><a href="tel:<?= $site->telephone() ?>"><?= $site->telephone() ?></a></p>
