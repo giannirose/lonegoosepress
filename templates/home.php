@@ -2,8 +2,9 @@
 
 <body>
   <div class="wrapper">
-
-
+    <div class="theme-container">
+      <?= snippet('theme-toggle') ?>
+    </div>
     <main class="main">
 
       <header class="header text-center">
@@ -24,9 +25,7 @@
         </div>
       </header>
 
-
       <?php snippet('navSet') ?>
-
 
       <div class="page-content">
         <div class="home-style">
@@ -37,21 +36,10 @@
 
     </main>
 
-
-
-
     <?php snippet('footer') ?>
   </div> <!-- Close .wrapper -->
 
-
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-  <!-- <script src="../assets/js/accordion-nojquery1.js" type="text/javascript"></script>
-  <script src="../assets/js/navMobile.js" type="text/javascript"></script>
-  <script src="../assets/js/accordion-1.js" type="text/javascript"></script> -->
-
   <?php snippet('scriptSource') ?>
-
-
 </body>
 
 </html>
