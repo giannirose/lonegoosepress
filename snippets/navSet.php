@@ -6,6 +6,7 @@
   ?php snippet('navAccordionMobile') ?
 </div> -->
 
-<div class="smallScreen">
+<div class="smallScreenMenu">
   <?php snippet('navMobileSlider') ?>
+
 </div>
