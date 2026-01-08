@@ -1,36 +1,17 @@
 /*Followins is the CodePen accordion example*/
 
-
-
-/* a {
-  color: hsl(9, 58%, 30%);
-  text-decoration: none;
-} */
-
 /** =======================
  * Contenedor Principal
  ===========================*/
-
-
-
-
 h1 a {
   color: #c12c42;
   font-size: 16px;
 }
 
-
-
-
 /*Below from CodePen sample*/
 .accordion .link {
   cursor: pointer;
   display: block;
-  /*padding: 15px 15px 15px 42px;*/
-  /*color: #4D4D4D;*/
-  /*font-size: 14px;*/
-  /*font-weight: 700;*/
-  /*border-bottom: 1px solid #CCC;*/
   position: relative;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -43,24 +24,6 @@ h1 a {
   text-align: center;
   color: #782d20;
 }
-
-
-/* .accordion li i {
-  position: absolute;
-  top: 16px;
-  left: 12px;
-  font-size: 18px;
-  color: #595959;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-} */
-
-/* .accordion li i.fa-chevron-down {
-  right: 12px;
-  left: auto;
-  font-size: 16px;
-} */
 
 .accordion li.open .link {
   color: #b63b4d;
@@ -80,10 +43,6 @@ h1 a {
 /**
  * Submenu
  -----------------------------*/
-
-
-
-
 .submenu a {
   display: block;
   text-decoration: none;
@@ -95,11 +54,6 @@ h1 a {
   text-align: center;
 }
 
-.submenu a:hover {
-  background: #b63b4d;
-  color: #f2f2f2;
-}
-
 /*End CodePen accordion example*/
 
 /*Seek arrow solution for .fa-chevron-down*/
@@ -107,7 +61,6 @@ h1 a {
   content: '\25BC';
   /* Unicode character for "plus" sign (+) is \02795 */
   font-size: 13px;
-  color: #777;
   float: right;
   margin-left: 5px;
 }
@@ -117,35 +70,9 @@ h1 a {
   /* Unicode character for "minus" sign (-) is \2796 */
 }
 
-
-/* .accordion .link-noarrow {
-  cursor: pointer;
-  display: block;
-  /*padding: 15px 15px 15px 42px;*/
-/*color: #4D4D4D;*/
-/*font-size: 14px;*/
-/*font-weight: 700;*/
-/*border-bottom: 1px solid #CCC;*/
-/* position: relative;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-} */
-
-/*below substituted by JR*/
-/* .accordion .link-noarrow {
-  text-align: center;
-  color: #782d20;
-} */
-
 .accordion .linktwo {
   cursor: pointer;
   display: block;
-  /*padding: 15px 15px 15px 42px;*/
-  /*color: #4D4D4D;*/
-  /*font-size: 14px;*/
-  /*font-weight: 700;*/
-  /*border-bottom: 1px solid #CCC;*/
   position: relative;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
