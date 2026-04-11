@@ -3,6 +3,7 @@
 <?php snippet('head') ?>
 
 <body>
+  <!-- smallHead includes light/dark toggle -->
   <!-- smallHead is a smaller logo/title set -->
   <?php snippet('smallHead') ?>
   <!-- Begin navigation -->
@@ -11,9 +12,7 @@
 
   <main class="main page-margin contact">
 
-    <p class="center">If sending photos, pdf's, or other attachments please email directly: <br><a class="underline"
-        href="mailto:info@lonegoosepress.com?subject=Inquiry">info@lonegoosepress.com</a>.
-    </p>
+
     <p class="center">Message or call me at:<br>
 
       <a href="tel:5419537364">541 953 7364</a>
@@ -63,8 +62,8 @@
             Text <abbr title="required">*</abbr>
           </label>
           <textarea id="text" name="text" required>
-                                                        <?= esc($data['text'] ?? '') ?>
-                                                        </textarea>
+              <?= esc($data['text'] ?? '') ?>
+              </textarea>
           <?= isset($alert['text']) ? '<span class="alert error">' . esc($alert['text']) . '</span>' : '' ?>
         </div>
         <input type="submit" name="submit" value="Submit">
